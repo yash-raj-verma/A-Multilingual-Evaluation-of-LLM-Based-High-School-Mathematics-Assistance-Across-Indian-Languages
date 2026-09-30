@@ -2,7 +2,7 @@
 
 **Yash Kumar and Subhajit Roy**  
 Indian Institute of Technology Kanpur, India  
-*Accepted at AACL-IJCNLP 2026 (Main Conference)*
+
 
 ---
 
@@ -17,6 +17,8 @@ This repository contains all datasets, model inference scripts, experimental res
 ```
 .
 ├── README.md                          ← this file
+├── LICENSE                            ← MIT License (code)
+├── LICENSE_DATA                       ← CC BY 4.0 (dataset)
 ├── robust_equivalence_scoring.py      ← three-layer equivalence checker
 ├── bootstrap_ci.py                    ← bootstrap 95% CI computation
 │
@@ -81,32 +83,21 @@ Requires an OpenAI API key set as `OPENAI_API_KEY` environment variable.
 
 ```bash
 export OPENAI_API_KEY=your_key_here
-python Supplementary_Materials/GPT-4o/test_openai.py \
-    --topic Conic \
-    --strategy One_Shot \
-    --data_dir Datasets/
+python Supplementary_Materials/GPT-4o/test_openai.py 
 ```
 
 ### LLaMA 3-8B — `Supplementary_Materials/LLaMA 3/llama_fast.py`
 Requires a local LLaMA 3-8B model checkpoint.
 
 ```bash
-python "Supplementary_Materials/LLaMA 3/llama_fast.py" \
-    --model_path /path/to/llama3-8b \
-    --topic Limits \
-    --strategy CoT \
-    --data_dir Datasets/
+python Supplementary_Materials/LLaMA 3/llama_fast.py 
 ```
 
 ### DeepSeek-R1 (7B) — `Supplementary_Materials/DeepSeek-R1/deepseek_r1.py`
 Requires a local DeepSeek-R1 7B model checkpoint.
 
 ```bash
-python Supplementary_Materials/DeepSeek-R1/deepseek_r1.py \
-    --model_path /path/to/deepseek-r1-7b \
-    --topic PnC \
-    --strategy One_Shot_Subcat \
-    --data_dir Datasets/
+python Supplementary_Materials/DeepSeek-R1/deepseek_r1.py 
 ```
 
 All scripts were run on an NVIDIA RTX A4000 GPU (16 GB). Each script queries each prompt over three independent trials from an empty context.
@@ -209,7 +200,7 @@ If you use this dataset or code, please cite:
 @inproceedings{kumar-roy-2026-multilingual,
   title     = {A Multilingual Evaluation of {LLM}-Based High-School Mathematics Assistance Across Indian Languages},
   author    = {Kumar, Yash and Roy, Subhajit},
-  booktitle = {Proceedings of the 3rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics},
+  booktitle = {Proceedings of the 5rd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics},
   year      = {2026}
 }
 ```
@@ -218,4 +209,10 @@ If you use this dataset or code, please cite:
 
 ## License
 
-The benchmark problems are derived from publicly available NCERT and SCERT educational textbooks for research purposes, consistent with their educational intent. The code in this repository is released under the MIT License. See `LICENSE` for details.
+This repository contains two separately licensed components:
+
+**Code** — all Python scripts (`robust_equivalence_scoring.py`, `bootstrap_ci.py`, and all scripts inside `Supplementary_Materials/`) are released under the **MIT License**. See `LICENSE`.
+
+**Dataset** — all CSV files inside `Datasets/` and `Supplementary_Materials/Datasets/` are released under **CC BY 4.0** (Creative Commons Attribution 4.0 International). See `LICENSE_DATA`.
+
+The dataset consists of numerically perturbed mathematical problem instances created by the authors from publicly available NCERT and SCERT Class 11 mathematics textbooks. The perturbations, manually derived ground-truth solutions, cross-lingual alignments, and subcategory annotations are original contributions of the authors. If you use the dataset, please cite the paper using the BibTeX entry above.
