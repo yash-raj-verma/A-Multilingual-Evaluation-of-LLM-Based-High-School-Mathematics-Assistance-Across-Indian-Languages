@@ -1,0 +1,3169 @@
+آئیے دیکھتے ہیں کہ ہمارے پاس مختلف رنگوں کے 6 جھنڈے ہیں اور ہمیں ان میں سے 4 جھنڈے ایک سگنل میں استعمال کرنے ہیں۔ مختلف رنگوں کے جھنڈوں کے ہونے کی وجہ سے، یہ ترتیب کے معاملے میں ایک مختلف صورت حال ہے۔ 
+
+چونکہ جھنڈوں کی ترتیب اہم ہے، ہم پرمٹیشن کا استعمال کریں گے۔ 4 جھنڈے منتخب کرنے کے بعد، اس کی ترتیب کا حساب لگانے کے لیے، ہم یہ دیکھیں گے کہ ہم 6 میں سے 4 جھنڈے کیسے منتخب کر سکتے ہیں اور پھر ان کی ترتیب بنا کر سگنل تیار کریں گے۔
+
+پرمٹیشن کا فارمولا یہ ہے:
+\[ P(n, r) = \frac{n!}{(n - r)!} \]
+
+یہاں:
+- \( n = 6 \) (مختلف رنگوں کی تعداد)
+- \( r = 4 \) (چننے کی تعداد)
+
+اب اس فارمولا میں مقادیر ڈالیں:
+\[ P(6, 4) = \frac{6!}{(6 - 4)!} = \frac{6!}{2!} = \frac{6 \times 5 \times 4 \times 3 \times 2 \times 1}{2 \times 1} \]
+\[ = 6 \times 5 \times 4 \times 3 = 360 \]
+
+لہذا، صحیح جواب یہ ہیں کہ ہمیں 360 مختلف سگنلز بنائے جا سکتے ہیں۔
+
+اب، جواب کو JSON فارمیٹ میں پیش کرتے ہیں:
+
+```json
+{ "Final Answer": "360" }
+```جب ہم 4 ہندسوں کی تعداد بنانے کی بات کرتے ہیں اور ہندسے 1، 2، 3، 4، اور 5 سے منتخب کیا جاتا ہے، اور یہ فرض کیا جاتا ہے کہ ہندسے دہرائے جا سکتے ہیں، تو یہ ہوتا ہے کہ ہر ہندسہ اپنی انتخاب کے لئے 5 ممکنات رکھتا ہے۔
+
+لہذا:
+- پہلے ہندسے کے لئے 5 انتخاب
+- دوسرے ہندسے کے لئے 5 انتخاب
+- تیسرے ہندسے کے لئے 5 انتخاب
+- چوتھے ہندسے کے لئے 5 انتخاب
+
+اب، ان سب کو ملانے کے لئے ہم ان کے انتخابوں کو ضرب دیں گے:
+
+عدد = 5 × 5 × 5 × 5 = 5^4 = 625
+
+لہذا، 4 ہندسوں کی تشکیل کی امکان 625 ہے۔
+
+نتیجہ درج ذیل JSON شکل میں ہے:
+
+```json
+{"Final Answer": "625"}
+```To find the number of different signals that can be created by arranging flags (one below the other) using at least 4 flags from 7 available different flags, we can use the Fundamental Principle of Counting.
+
+1. **Choosing the number of flags**: We can choose at least 4 flags, so we can have 4, 5, 6, or 7 flags. 
+
+2. **Calculating the arrangements for each case**:
+
+   - **For 4 flags**: The number of ways to choose and arrange 4 flags from 7 can be calculated as:
+     \[
+     P(7, 4) = \frac{7!}{(7-4)!} = \frac{7!}{3!} = 7 \times 6 \times 5 \times 4 = 840
+     \]
+
+   - **For 5 flags**: 
+     \[
+     P(7, 5) = \frac{7!}{(7-5)!} = \frac{7!}{2!} = 7 \times 6 \times 5 \times 4 \times 3 = 2520
+     \]
+
+   - **For 6 flags**: 
+     \[
+     P(7, 6) = \frac{7!}{(7-6)!} = 7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 = 5040
+     \]
+
+   - **For 7 flags**: 
+     \[
+     P(7, 7) = 7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5040
+     \]
+
+3. **Total number of arrangements**: We sum the arrangements for each case:
+   \[
+   Total = P(7, 4) + P(7, 5) + P(7, 6) + P(7, 7) 
+   = 840 + 2520 + 5040 + 5040 = 12960
+   \]
+
+Thus, the number of different signals that can be created is **12,960**.
+
+Here’s the final answer in the requested format:
+
+```json
+{ "Final Answer": "12960" }
+```ہمیں ہندسوں 1، 2، 3، 4 اور 5 سے 5 ہندسوں کی تعداد تشکیل دینا ہے۔ چونکہ ہندسوں کی تکرار کی اجازت ہے، اس لیے ہم ہر ہندسے کے لئے 5 ممکنہ اعداد میں سے کسی کا بھی انتخاب کرسکتے ہیں۔
+
+ہمیں ہر ہندسے کے لیے 5 انتخاب فراہم ہیں:
+
+1. پہلے ہندسے کے لئے: 5 انتخاب
+2. دوسرے ہندسے کے لئے: 5 انتخاب
+3. تیسرے ہندسے کے لئے: 5 انتخاب
+4. چوتھے ہندسے کے لئے: 5 انتخاب
+5. پانچویں ہندسے کے لئے: 5 انتخاب
+
+چونکہ یہ حسابات آزاد ہیں، ہم ان تمام انتخابوں کو آپس میں ضرب دیں گے:
+
+\(5 \times 5 \times 5 \times 5 \times 5 = 5^5\)
+
+اب ہم \(5^5\) کا حساب کریں گے:
+
+\(5^5 = 3125\)
+
+لہذا، مجموعی طور پر، ہم 5 ہندسوں کی 3125 تعداد تشکیل دے سکتے ہیں۔
+
+جواب درج ذیل ہے:
+
+```json
+{ "Final Answer": "3125" }
+```ہمیں 1، 2، 3، 4 اور 5 ہندسوں کی مدد سے 5 ہندسوں کی تعداد تشکیل دینی ہے، اور یہ فرض کرتے ہوئے کہ ہندسوں کی تکرار کی اجازت نہیں ہے۔
+
+ہم اس مسئلے کو اس طرح حل کریں گے:
+
+1. ہمارے پاس 5 ہندسے ہیں: 1، 2، 3، 4، 5
+2. ہمیں 5 ہندسوں کا ایک خاص ترتیب بنانا ہے، لہذا ہم تمام 5 ہندسوں کو ہی استعمال کریں گے۔
+3. یہ ایک انفرادی ترتیب کا مسئلہ ہے، جسے ہم 5! (5 فیوریل) کے ذریعہ حل کرتے ہیں۔
+
+5! کا حساب:
+5! = 5 × 4 × 3 × 2 × 1 = 120
+
+پس، 5 ہندسوں کی مختلف تعداد جو تشکیل دی جا سکتی ہے، 120 ہے۔
+
+یہاں حتمی جواب JSON فارمیٹ میں پیش کیا گیا ہے:
+
+```json
+{ "Final Answer": "120" }
+```To find the number of permutations of the letters in the word "پریاگراج", we must consider the total number of letters and account for any repetitions. 
+
+The word "پریاگراج" consists of the following letters:
+
+- پ (1 time)
+- ر (2 times)
+- ی (1 time)
+- ا (1 time)
+- گ (1 time)
+- ج (1 time)
+
+The total number of letters is 9. The formula for finding the number of distinct permutations of a multiset is given by:
+
+\[
+\text{Number of permutations} = \frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}
+\]
+
+Where:
+- \( n \) is the total number of letters,
+- \( n_1, n_2, \ldots, n_k \) are the frequencies of each distinct letter.
+
+In this case:
+
+- \( n = 9 \) (total letters)
+- The letter ر appears 2 times, while all other letters appear 1 time.
+
+Thus, we can write the equation as:
+
+\[
+\text{Number of permutations} = \frac{9!}{2! \times 1! \times 1! \times 1! \times 1! \times 1!}
+\]
+
+Calculating this:
+
+1. Calculate \( 9! = 362880 \).
+2. Calculate \( 2! = 2 \).
+
+Now divide:
+
+\[
+\text{Number of permutations} = \frac{362880}{2} = 181440
+\]
+
+The final answer is the number of distinct arrangements of the letters in the word "پریاگراج":
+
+```json
+{ "Final Answer": "181440" }
+```To calculate the number of 6-digit numbers that can be formed using the digits from 1 to 9 without repetition, we need to select 6 digits from the 9 available and then arrange them.
+
+1. **Choosing the digits**: We can choose any 6 digits from the 9 available digits. The number of ways to choose 6 digits from 9 is given by the combination formula \( C(n, r) \), where \( n \) is the total number of digits available, and \( r \) is the number of digits to choose.
+
+   However, since we also need to arrange these digits, we use permutations directly.
+
+2. **Arranging the digits**: Once we have chosen the 6 digits, we can arrange them in \( 6! \) (6 factorial) ways.
+
+The total number of permutations of 6 digits chosen from 9 is given by:
+\[
+P(9, 6) = \frac{9!}{(9 - 6)!} = \frac{9!}{3!} = 9 \times 8 \times 7 \times 6 \times 5 \times 4
+\]
+
+Calculating that step by step:
+
+- \( 9 \times 8 = 72 \)
+- \( 72 \times 7 = 504 \)
+- \( 504 \times 6 = 3024 \)
+- \( 3024 \times 5 = 15120 \)
+- \( 15120 \times 4 = 60480 \)
+
+Thus, the total number of 6-digit combinations is \( 60480 \).
+
+So, the final answer in the desired JSON format will be:
+
+```json
+{ "Final Answer": "60480" }
+```To solve the problem of arranging 6 red, 5 yellow, and 4 green discs in a row, where discs of the same color are considered distinct, we can use the formula for permutations of a multiset:
+
+The formula to calculate the number of arrangements (permutations) of \( n \) items where there are groups of indistinguishable items is given by:
+
+\[
+\frac{n!}{n_1! \cdot n_2! \cdots n_k!}
+\]
+
+where:
+- \( n \) is the total number of items,
+- \( n_1, n_2, \ldots, n_k \) are the counts of each indistinguishable group.
+
+In this case:
+- Total number of discs \( n = 6 + 5 + 4 = 15 \)
+- The counts for each color: \( n_1 = 6 \) (red), \( n_2 = 5 \) (yellow), \( n_3 = 4 \) (green).
+
+The permutation can be calculated as follows:
+
+\[
+\text{Number of arrangements} = \frac{15!}{6! \cdot 5! \cdot 4!}
+\]
+
+Now, let's compute this step by step:
+
+1. Calculate \( 15! \),
+2. Calculate \( 6! \),
+3. Calculate \( 5! \),
+4. Calculate \( 4! \),
+5. Substitute these values into the formula.
+
+Calculating the factorials:
+
+- \( 15! = 1307674368000 \)
+- \( 6! = 720 \)
+- \( 5! = 120 \)
+- \( 4! = 24 \)
+
+Now substituting back into the formula:
+
+\[
+\text{Number of arrangements} = \frac{1307674368000}{720 \cdot 120 \cdot 24}
+\]
+
+First, calculate the denominator:
+
+\[
+720 \cdot 120 = 86400
+\]
+\[
+86400 \cdot 24 = 2073600
+\]
+
+Now, divide \( 1307674368000 \) by \( 2073600 \):
+
+\[
+1307674368000 \div 2073600 = 63000
+\]
+
+Thus, the final answer, after all calculations, is:
+
+```json
+{ "Final Answer": "63000" }
+```To solve the problem of finding the number of arrangements of the letters in the word "آزادیان" that begin with the letter 'د', we can follow these steps:
+
+1. **Identify the total letters and their frequency**: The word "آزادیان" consists of 8 letters. We observe the letters are: 
+   - آ: 1
+   - ز: 1
+   - د: 1
+   - ی: 1
+   - ا: 1
+   - ن: 1
+
+   So, each of these letters appears only once.
+
+2. **Fix the first letter**: Since we want the arrangements to start with 'د', we can treat 'د' as a fixed first letter.
+
+3. **Count the arrangements of the remaining letters**: After fixing 'د', we are left with the letters "آزادیان" minus 'د', which leaves us with the letters "آزایان". 
+
+   The remaining letters are: آ, ز, ی, ا, ن (total of 7 letters).
+
+4. **Calculate the number of arrangements**: The total number of arrangements of 7 distinct letters is given by the factorial of the number of letters. Therefore, we calculate the factorial of 7.
+
+   \[
+   7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5040
+   \]
+
+Thus, the total number of arrangements of the word "آزادیان" that start with the letter 'د' is 5040.
+
+In JSON format, the final answer would be:
+
+```json
+{ "Final Answer": "5040" }
+```ہم لفظ "آزادیان" کی حروف کی تعداد کو دیکھتے ہیں۔ اس میں کل 8 حروف ہیں:  
+- آ  
+- ز  
+- ا  
+- د  
+- ی  
+- ا  
+- ن  
+
+ہمیں ان حروف کے تمام انتظامات کی تعداد تلاش کرنی ہے جو "D" اور "N" کے ساتھ شروع ہوتے ہیں۔
+
+1. **D کے شروع میں**:  
+   اگر ہم D کو شروع میں رکھتے ہیں تو باقی کے حروف ہیں:  
+   - آ  
+   - ز  
+   - ا  
+   - ی  
+   - ا  
+   - ن  
+
+   کل باقی حروف کی تعداد ہے 7، جن میں "ا" دو بار ہے۔  
+   ان کو ترتیب دینے کی تعداد ہوگی:  
+   \[
+   \frac{7!}{2!} = \frac{5040}{2} = 2520
+   \]
+
+2. **N کے شروع میں**:  
+   اگر ہم N کو شروع میں رکھتے ہیں تو باقی کے حروف ہیں:  
+   - آ  
+   - ز  
+   - ا  
+   - د  
+   - ی  
+   - ا  
+
+   کل باقی حروف کی تعداد بھی 7 ہے، جن میں بھی "ا" دو بار موجود ہے۔  
+   ان کو ترتیب دینے کی تعداد بھی:  
+   \[
+   \frac{7!}{2!} = \frac{5040}{2} = 2520
+   \]
+
+اب ہمیں ان دونوں کی تعداد کو جمع کرنا ہے:
+\[
+2520 + 2520 = 5040
+\]
+
+لہذا، کل انتظامات کی تعداد جو D اور N کے ساتھ شروع ہوتے ہیں وہ 5040 ہے۔
+
+حتمی جواب JSON شکل میں:
+
+```json
+{ "Final Answer": "5040" }
+```To solve the problem of how many distinct permutations of the letters in the word "مسیسیپی" can be formed when taken four at a time, we first need to analyze the letters and their frequencies.
+
+The word "مسیسیپی" consists of the following letters:
+- م: 1
+- س: 2
+- ی: 1
+- پ: 1
+- i: 1 
+
+This gives us a total of 7 letters with the specified frequencies.
+
+Next, we notice that we can have various combinations while selecting 4 out of these 7 letters. Given that we have 2 identical letters "س", we will consider different cases regarding the count of "س" in our selection of 4 letters.
+
+### Case Analysis
+1. **Case 1**: 0 س (2 other letters)  
+   We can select 4 letters from م, ی, پ, i (4 distinct letters).  
+   The count of ways = 4! permutations.
+
+2. **Case 2**: 1 س (3 other letters)  
+   We have 1 "س" and we can choose 3 letters from م, ی, پ, i.  
+   The count of ways = C(4, 3) * 4! (4! for the arrangement).
+
+3. **Case 3**: 2 س (2 other letters)  
+   We take 2 "س" and select 2 letters from م, ی, پ, i.  
+   The count of ways = C(4, 2) * (4! / 2!) (4! for the overall arrangement and dividing by 2! for the two identical "س").
+
+Now let’s compute the number of permutations for each case.
+
+### Case Calculations:
+1. **Case 1**: 4 letters (م, ی, پ, i)
+   - The number of ways = 4! = 24
+   
+2. **Case 2**: 1 س + 3 others (choose any 3 from م, ی, پ, i)
+   - C(4, 3) = 4, so the number of ways = 4 * 4! = 4 * 24 = 96
+   
+3. **Case 3**: 2 س + 2 others (choose any 2 from م, ی, پ, i)
+   - C(4, 2) = 6, so the number of ways = 6 * (4! / 2!) = 6 * 12 = 72
+
+### Add them up:
+Total = 24 (from Case 1) + 96 (from Case 2) + 72 (from Case 3) = 192
+
+In JSON format, we express the answer as:
+
+```json
+{
+  "Final Answer": "192"
+}
+```لفظ "اجازت" کے حروف ہیں: ا، ج،ازت، جو کہ میں ہیں: ا، ج، ا، ز، ت۔
+
+یہ لفظ 6 حروف پر مشتمل ہے، لیکن ا اور ج کچھ دو بار آ رہے ہیں۔
+
+ہمیں الفاظ ایسے تلاش کرنے ہیں جو "ٹی" سے شروع ہوتے ہیں اور "ن" پر ختم ہوتے ہیں۔ یہاں، ٹی اور ن موجود نہیں ہیں، لہذا یہ سمجھنی ضروری ہے کہ آپ نے الفاظ "اجازت" کے حروف کے بجائے ان سے مختلف حروف "ٹی" اور "ن" کو شامل کر کے ٹائپ کیا ہے۔
+
+اگر ہم فرض کریں کہ آپ کا مطلب "اجازت" کا اہتمام کرنا ہے تو ہم جانچ لیتے ہیں کہ کتنے مختلف الفاظ بنائے جا سکتے ہیں۔
+
+اب، "اجازت" کے حروف میں شامل کرنے کے لئے:
+
+1. الگ سے غور کریں کہ ہم ٹی سے شروع کر رہے ہیں، جو کہ یہاں موجود نہیں ہے، اور ن پر ختم کر رہے ہیں، جو بھی نہیں ہے۔
+
+لہذا، اگر ہم صرف "اجازت" کے حروف سے ہی سمجھتے ہیں، تو:
+
+1. حروف کی گنتی: (اجازت) = 6 حروف
+2. دو ا اور ایک ج کو ملا کر: 
+   \(\frac{6!}{2! \cdot 1! \cdot 1! \cdot 1!} = \frac{720}{2} = 360\)
+
+لیکن اس میں ہر لفظ کی ابتدائی اور آخری حالت کے چھاپے پر ہم نے گزارہ نہیں کیا۔
+
+لہذا، اس سوال کا درست جواب ممکن نہیں ہے جنہیں آپ کے مطلوبہ حروف شامل نہیں ہیں۔
+
+نتیجہ:
+
+```json
+{"Final Answer": "0"}
+```
+
+یہاں جواب 0 ہے کیونکہ "ٹی" سے شروع اور "ن" پر ختم کرنے کے لیے فراہم کردہ لفظ کے حروف میں کوئی جگہ نہیں ہے۔لفظ "اجازت نامے" میں کل 10 حروف ہیں:
+
+اجازت نامے
+A, J, A, Z, T, N, A, M, E
+
+ہمیں یہ معلوم ہے کہ T اور S (جو کہ دراصل یہاں 'S' موجود نہیں ہے، لیکن آپ کی شرط کو مد نظر رکھتے ہوئے ہم فرض کر رہے ہیں کہ آپ کا مطلب A ہے) کے درمیان ہمیشہ 4 حرف موجود ہوسکتے ہیں۔
+
+1. **ٹی اور ایس کی جگہ فیصلہ کرنا**:
+   ہم T (ٹی) اور A (س) کو منتخب کرتے ہیں۔ ہم فرض کرتے ہیں کہ چونکہ سوال میں ایس کا تذکرہ ہے، ہم A کو استعمال کریں گے۔
+
+2. **ٹی اور اے کے درمیان 4 حروف**:
+   ٹی اور اے (S کی جگہ پر) کے درمیان 4 حروف ہوں گے۔ لہذا، ہمیں ان دو حروف (T اور A) کو ایک فاصلے پر رکھنا ہوگا اور درمیان میں 4 حروف لگانے ہوں گے۔
+
+3. **دو حروف کی جگہ خالی کرنا**:
+   جب ہم T اور A کو فکس کر دیتے ہیں تو ہمارے پاس صرف 8 (10 - 2 = 8) حروف بچتے ہیں جنہیں ہم ترتیب دیں گے۔
+
+4. **ٹی اور اے کے مشترکہ حروف**:
+   H میں دو A موجود ہیں۔ یہ اسی وجہ سے اختیاری ہے کہ انہیں مختلف یا مختلف طور پر ریپیٹ نہیں کرنا چاہئے۔
+
+5. **حروف کی تعداد اور ان کی ترتیب**:
+   ہمیں ان 8 حروف کو ترتیب دینا ہے اور آخری 2 حروف (T اور A) کی آخری جگہیں یقینی طور پر فکس ہوتی ہیں۔
+
+حروف کی ترتیب کا حساب لگانے کے لئے:
+
+\[
+\text{Total arrangements} = \frac{8!}{\text{(repeats of A)}}
+\]
+
+8! = 40320
+Repetition for A = 2
+
+\[
+Total arrangements = \frac{8!}{2!} = \frac{40320}{2} = 20160
+\]
+
+**Final Answer:**
+
+```json
+{ "Final Answer": "20160" }
+```To solve the problem, we need to find the number of ways to choose 4 cards from a deck of 52 cards while ensuring that not all selected cards are face cards.
+
+**Step 1: Calculate Total Ways to Choose 4 Cards from 52 Cards**
+
+The total number of ways to choose 4 cards from 52 can be calculated using the combination formula:
+\[
+\text{C}(n, r) = \frac{n!}{r!(n - r)!}
+\]
+In this case, \(n = 52\) and \(r = 4\).
+
+\[
+\text{C}(52, 4) = \frac{52!}{4!(52 - 4)!} = \frac{52!}{4! \times 48!}
+\]
+
+Calculating:
+\[
+= \frac{52 \times 51 \times 50 \times 49}{4 \times 3 \times 2 \times 1} = 270725
+\]
+
+**Step 2: Calculate the Number of Ways to Choose 4 Cards that are all Face Cards**
+
+There are a total of 12 face cards in a standard deck (3 face cards per suit × 4 suits). We need to find the number of ways to choose 4 cards from these 12 face cards.
+
+\[
+\text{C}(12, 4) = \frac{12!}{4!(12 - 4)!} = \frac{12!}{4! \times 8!}
+\]
+
+Calculating:
+\[
+= \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2 \times 1} = 495
+\]
+
+**Step 3: Subtract the Face Card Combinations from Total Combinations**
+
+Now, we need to subtract the combinations where all selected cards are face cards from the total combinations:
+
+\[
+\text{Valid combinations} = \text{Total Combinations} - \text{All Face Card Combinations}
+\]
+
+\[
+= 270725 - 495 = 270230
+\]
+
+**Final Answer:**
+
+```json
+{ "Final Answer": "270230" }
+```To determine how many different "ragas" can be formed by 23 points on a circle, we interpret this as counting the different combinations of points selected from the 23 points.
+
+In combinatorial problems involving a circle, one common assumption is that the arrangement is cyclic (i.e., the start of the arrangement can be at any of the points, but they are symmetrical). This leads us to the idea of "combinations of points."
+
+The formula to calculate the number of ways to choose \( k \) points from \( n \) distinct points is given by the binomial coefficient:
+
+\[
+C(n, k) = \frac{n!}{k!(n-k)!}
+\]
+
+However, since "ragas" could mean all possible subsets, including choosing 1 point, 2 points, ..., up to all 23 points, we must consider all combinations. The total number of combinations (subsets) of \( n \) elements is \( 2^n \), with the formula being \( 2^{23} \), which includes the empty set.
+
+Thus, in this case:
+- The total combinations of the 23 points would be \( 2^{23} = 8388608 \).
+
+However, if we are only interested in non-empty combinations (since selecting 0 points typically doesn't constitute a "raga"), we subtract that one possibility (the empty set):
+
+\[
+2^{23} - 1 = 8388607
+\]
+
+The final answer, formatted as requested, is:
+
+```json
+{ "Final Answer": "8388607" }
+```ہمیں ایک گروپ میں 6 لڑکیوں اور 9 لڑکوں کے ساتھ مل کر ایسی ٹیم بنانی ہے جس میں 7 ممبروں کا انتخاب کیا جائے اور اس میں کوئی لڑکی نہ ہو۔ اس کا مطلب ہے کہ ہمیں صرف لڑکوں میں سے 7 ممبروں کا انتخاب کرنا ہوگا۔
+
+لڑکوں کی تعداد 9 ہے، اور ہمیں 7 لڑکوں کا انتخاب کرنا ہے۔ ہم اس کو کمبینیشن کی مدد سے حل کریں گے، جس کا فارمولہ یہ ہے:
+
+\[ C(n, r) = \frac{n!}{r!(n-r)!} \]
+
+یہاں، 
+- \( n = 9 \) (لڑکوں کی تعداد)
+- \( r = 7 \) (چنے جانے والے لڑکوں کی تعداد)
+
+ہم اینڈ ایکسپریشن کو ڈالتے ہیں:
+
+\[ C(9, 7) = \frac{9!}{7!(9-7)!} = \frac{9!}{7! \cdot 2!} \]
+
+اسے مزید سادہ کیا جائے تو:
+
+\[ = \frac{9 \times 8}{2 \times 1} = \frac{72}{2} = 36 \]
+
+تو، کل ممکنہ طریقے 36 ہیں۔
+
+چونکہ ہمیں جواب JSON فارمیٹ میں دینا ہے، تو جواب یہ ہوگا:
+
+```json
+{ "Final Answer": "36" }
+```To solve the problem of selecting a team of 7 members from a group of 6 girls and 9 boys, ensuring that the team has at least one boy and one girl, we can use the principle of complementary counting.
+
+### Steps:
+
+1. **Total ways to select any 7 members:** 
+   We can choose 7 members from a total of 15 (6 girls + 9 boys).
+   \[
+   \text{Total ways} = \binom{15}{7}
+   \]
+
+2. **Exclude invalid cases:**
+   - Case 1: All 7 members are boys.
+     \[
+     \text{Ways to choose 7 boys} = \binom{9}{7}
+     \]
+   
+   - Case 2: All 7 members are girls (which is not possible since there are only 6 girls).
+     \[
+     \text{Ways to choose 7 girls} = \binom{6}{7} = 0
+     \]
+
+3. **Calculating the values:**
+   - Calculate \(\binom{15}{7}\) and \(\binom{9}{7}\):
+   \[
+   \binom{15}{7} = \frac{15 \times 14 \times 13 \times 12 \times 11 \times 10 \times 9}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 6435
+   \]
+   \[
+   \binom{9}{7} = \binom{9}{2} = \frac{9 \times 8}{2 \times 1} = 36
+   \]
+
+4. **Using complementary counting:**
+   - Total valid combinations = Total combinations - Invalid combinations:
+   \[
+   \text{Valid combinations} = \binom{15}{7} - \binom{9}{7} = 6435 - 36 = 6399
+   \]
+
+### Final Answer:
+```json
+{ "Final Answer": "6399" }
+```ہمیں ایک ٹیم بنانی ہے جس میں کم از کم 5 لڑکیاں ہوں اور کل 7 ممبر ہوں۔ ہمارے پاس 6 لڑکیاں اور 9 لڑکے ہیں۔ ہم مختلف صورتوں کو دیکھیں گے:
+
+1. **5 لڑکیاں اور 2 لڑکے**
+2. **6 لڑکیاں اور 1 لڑکا**
+
+اب ہم ان دونوں صورتوں کے لئے طریقوں کی تعداد کا حساب لگائیں گے۔
+
+### صورت 1: 5 لڑکیاں اور 2 لڑکے
+- لڑکیوں کا انتخاب: \(\binom{6}{5}\) 
+- لڑکوں کا انتخاب: \(\binom{9}{2}\) 
+
+یہاں ہم یہ حساب کریں گے:
+\[
+\binom{6}{5} = 6 \quad \text{(5 لڑکیوں میں سے 1 کو چھوڑیں گے)}
+\]
+\[
+\binom{9}{2} = \frac{9 \times 8}{2 \times 1} = 36 \quad \text{(2 لڑکوں کا انتخاب)}
+\]
+اس کا نتیجہ:
+\[
+\text{Total for this case} = \binom{6}{5} \times \binom{9}{2} = 6 \times 36 = 216
+\]
+
+### صورت 2: 6 لڑکیاں اور 1 لڑکا
+- لڑکیوں کا انتخاب: \(\binom{6}{6} = 1\) 
+- لڑکوں کا انتخاب: \(\binom{9}{1} = 9\) 
+
+اس کا نتیجہ:
+\[
+\text{Total for this case} = \binom{6}{6} \times \binom{9}{1} = 1 \times 9 = 9
+\]
+
+### کل تعداد
+اب ہم ان دونوں صورتوں کے نتائج کو جمع کریں گے:
+\[
+\text{Total Teams} = 216 + 9 = 225
+\]
+
+### حتمی جواب
+ہم اپنی حتمی تعداد کو json کی شکل میں پیش کرتے ہیں:
+
+```json
+{
+  "Final Answer": "225"
+}
+```To determine how many numbers greater than 1,000,000 can be formed using the digits 1, 2, 2, 4, 2, 4, we need to follow these steps:
+
+1. **Count the total number of digits**: We have the digits {1, 2, 2, 2, 4, 4}. This consists of:
+   - One "1"
+   - Three "2"s
+   - Two "4"s
+
+2. **Determine valid configurations**: A number greater than 1,000,000 must have 7 digits. However, we only have 6 digits. This means that we cannot form any 7-digit numbers with the provided digits. 
+
+Based on this analysis, we conclude that there are **no combinations** of the given digits that can form a valid number greater than 1,000,000. 
+
+Thus, we can present the final answer as follows:
+
+```json
+{ "Final Answer": "0" }
+```To solve the problem of arranging 7 girls and 5 boys in such a way that no two boys sit next to each other, we can follow these steps:
+
+1. **Arrange the Girls**: First, we arrange the 7 girls. The number of ways to arrange 7 girls is given by \(7!\).
+
+   \[
+   7! = 5040
+   \]
+
+2. **Identify Spaces for Boys**: Once the girls are arranged, they create spaces where boys can sit. For 7 girls arranged in a line, there are 8 potential spaces for boys to sit, which are before the first girl, between the girls, and after the last girl. 
+
+   Visualizing this with G for girls:
+   \[
+   _ G _ G _ G _ G _ G _ G _ G _
+   \]
+   Here, each underscore (_) represents a potential space for a boy.
+
+3. **Select Spaces for Boys**: We need to choose 5 spaces out of these 8 available spaces to place the boys. The number of ways to choose 5 spaces from 8 is given by \(\binom{8}{5}\).
+
+   \[
+   \binom{8}{5} = \binom{8}{3} = \frac{8 \times 7 \times 6}{3 \times 2 \times 1} = 56
+   \]
+
+4. **Arrange the Boys**: After selecting the spaces, we can arrange the 5 boys in the 5 chosen spaces. The number of ways to arrange 5 boys is given by \(5!\).
+
+   \[
+   5! = 120
+   \]
+
+5. **Combine All Parts Together**: Now, we combine all the pieces to find the total arrangements. The total number of ways to arrange 7 girls and 5 boys such that no two boys are next to each other is the product of the ways to arrange the girls, the ways to choose the spaces, and the ways to arrange the boys.
+
+   \[
+   \text{Total Arrangements} = 7! \times \binom{8}{5} \times 5!
+   \]
+   \[
+   \text{Total Arrangements} = 5040 \times 56 \times 120
+   \]
+
+6. **Calculating the Final Value**:
+   \[
+   5040 \times 56 = 282240
+   \]
+   \[
+   282240 \times 120 = 33868800
+   \]
+
+Thus, the final answer for the total number of arrangements is:
+
+```json
+{ "Final Answer": "33868800" }
+```To solve the problem, we first analyze the word "مساوات" (which means "equation" in Urdu). The word "مساوات" consists of the following letters: م, س, ا, و, ت.
+
+The breakdown of the letters is as follows:
+
+- م (1 time)
+- س (1 time)
+- ا (2 times)
+- و (1 time)
+- ت (1 time)
+
+When calculating the number of possible permutations using all letters, we can note the frequency of each letter to avoid counting duplicates.
+
+The formula for the number of permutations of a multiset (where some items are repeated) is given by:
+
+\[
+\text{Permutations} = \frac{n!}{n_1! \times n_2! \times n_3! \times \ldots}
+\]
+
+Where:
+- \( n \) is the total number of letters,
+- \( n_1, n_2, \ldots \) are the frequencies of the repeat letters.
+
+For "مساوات":
+- The total number of letters \( n = 8 \) (م, س, ا, ا, و, ت).
+- The frequencies are: م (1), س (1), ا (2), و (1), ت (1).
+
+Now applying the formula:
+\[
+\text{Permutations} = \frac{8!}{1! \times 1! \times 2! \times 1! \times 1!}
+\]
+
+Calculating factorials:
+- \( 8! = 40320 \)
+- \( 1! = 1 \)
+- \( 2! = 2 \)
+
+Substituting these values:
+\[
+\text{Permutations} = \frac{40320}{1 \times 1 \times 2 \times 1 \times 1} = \frac{40320}{2} = 20160
+\]
+
+So, the total number of words (or arrangements of letters) that can be made from the letters of the word "مساوات" is 20160.
+
+The final answer in the required JSON format is:
+
+```json
+{ "Final Answer": "20160" }
+```To solve the problem, we need to consider the special condition regarding the 5 students who will either all participate or none will participate in the selection for the party. 
+
+Let's break down the problem:
+
+1. We have a total of 27 students.
+2. Out of these, there are 5 students who have agreed to either fully participate or not at all.
+3. Thus, we can have two scenarios:
+    - Scenario 1: All 5 students participate.
+    - Scenario 2: None of the 5 students participate.
+
+**Scenario 1: All 5 participate**
+- If all 5 students participate, we need to choose 12 - 5 = 7 more students from the remaining 22 students (27 - 5 = 22).
+- The number of ways to choose these 7 from 22 is given by the combination formula \( C(n, k) = \frac{n!}{k!(n-k)!} \).
+
+So we calculate \( C(22, 7) \):
+\[
+C(22, 7) = \frac{22!}{7!(22-7)!} = \frac{22!}{7! \times 15!} = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 497420
+\]
+
+**Scenario 2: None participate**
+- If none of the 5 students participate, we need to choose all 12 students from the remaining 22 students.
+- The number of ways to choose 12 from 22 is given by \( C(22, 12) \).
+
+So we calculate \( C(22, 12) \):
+\[
+C(22, 12) = C(22, 10) = \frac{22!}{10! \times 12!} = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16 \times 15 \times 14 \times 13}{10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 646646
+\]
+
+**Total ways:**
+We now add the results from both scenarios:
+\[
+Total = C(22, 7) + C(22, 12) = 497420 + 646646 = 1143066
+\]
+
+Thus, the final answer is:
+
+```json
+{ "Final Answer": "1143066" }
+```To solve this problem, we need to determine how many ways a student can select questions from two parts of an exam, given the constraints on the selection.
+
+Here’s the breakdown:
+
+1. **Definitions:**
+   - Part 1 has 7 questions.
+   - Part 2 has 9 questions.
+   - The student must select a total of 10 questions, with at least 3 from each part.
+
+2. **Selections:**
+   - Let \( x \) be the number of questions selected from Part 1, and \( y \) be the number of questions selected from Part 2.
+   - The conditions are:
+     - \( x + y = 10 \)
+     - \( x \geq 3 \)
+     - \( y \geq 3 \)
+
+3. **Constraints:**
+   - Since \( x \geq 3 \) and \( y \geq 3 \), we can substitute \( x' = x - 3 \) and \( y' = y - 3 \) where \( x' \geq 0 \) and \( y' \geq 0 \). Now the equation becomes:
+     - \( x' + y' = 4 \)
+
+4. **Possible Combinations:**
+   - We need combinations for \( x \) and \( y \):
+     - \( x = 3, y = 7 \)
+     - \( x = 4, y = 6 \)
+     - \( x = 5, y = 5 \)
+     - \( x = 6, y = 4 \)
+     - \( x = 7, y = 3 \)
+
+5. **Calculating Combinations:**
+   - For each possible pair \( (x, y) \):
+     - \( \binom{7}{x} \) for the first part, and \( \binom{9}{y} \) for the second part.
+
+Now we calculate the combinations for each case:
+
+- **Case 1:** \( (3, 7) \)
+  \[
+  \binom{7}{3} \times \binom{9}{7} = 35 \times 36 = 1260
+  \]
+
+- **Case 2:** \( (4, 6) \)
+  \[
+  \binom{7}{4} \times \binom{9}{6} = 35 \times 84 = 2940
+  \]
+
+- **Case 3:** \( (5, 5) \)
+  \[
+  \binom{7}{5} \times \binom{9}{5} = 21 \times 126 = 2646
+  \]
+
+- **Case 4:** \( (6, 4) \)
+  \[
+  \binom{7}{6} \times \binom{9}{4} = 7 \times 126 = 882
+  \]
+
+- **Case 5:** \( (7, 3) \)
+  \[
+  \binom{7}{7} \times \binom{9}{3} = 1 \times 84 = 84
+  \]
+
+6. **Total Combinations:**
+Now, we sum all the combinations calculated:
+\[
+1260 + 2940 + 2646 + 882 + 84 = 7842
+\]
+
+Finally, the total number of ways the student can select the questions is 7842.
+
+```json
+{
+  "Final Answer": "7842"
+}
+```ہمیں ایک 52 کارڈ کے پیک سے 6 کارڈ منتخب کرنے کے طریقوں کی تعداد معلوم کرنی ہے۔ یہ ایک مجموعاتی مسئلہ ہے، جہاں ہم یہ معلوم کرنا چاہتے ہیں کہ بغیر کسی ترتیب کے 6 کارڈ کیسے منتخب کیے جا سکتے ہیں۔ 
+
+ہمیں یہ فارمولہ استعمال کرنا ہوگا:
+
+\[
+C(n, r) = \frac{n!}{r!(n - r)!}
+\]
+
+جہاں:
+- \( n \) = کل کارڈز کی تعداد (یہاں 52)
+- \( r \) = منتخب کردہ کارڈز کی تعداد (یہاں 6)
+
+اب ہم اسے حل کرتے ہیں:
+
+\[
+C(52, 6) = \frac{52!}{6! \times (52 - 6)!} = \frac{52!}{6! \times 46!}
+\]
+
+اصلی عدد کو سادہ بنانے کیلئے، ہم صرف 52 سے 47 تک کے عددوں کو ضرب دیں گے:
+
+\[
+C(52, 6) = \frac{52 \times 51 \times 50 \times 49 \times 48 \times 47}{6 \times 5 \times 4 \times 3 \times 2 \times 1}
+\]
+
+اب اس کو حساب کر لیتے ہیں:
+
+1. اوپر کی جانب: 52 × 51 × 50 × 49 × 48 × 47 = 139536880
+2. نیچے کی جانب: 6 × 5 × 4 × 3 × 2 × 1 = 720
+
+اب ہم یہ تمام عددوں کو آپس میں تقسیم کرتے ہیں:
+
+\[
+C(52, 6) = \frac{139536880}{720} = 193536
+\]
+
+لہذا، 52 کارڈ کے ایک پیک سے 6 کارڈ منتخب کرنے کے طریقوں کی تعداد 193536 ہے۔ 
+
+اب اگر ہم پوچھیں کہ ان میں سے کتنے کارڈ ایک ہی رنگ کے ہو سکتے ہیں، تو چونکہ ہر رنگ (ہارت، کرتب، دل، اور سیاہ) میں 13 کارڈ ہوتے ہیں، اگر ہم تمام کارڈ کو دوسرے رنگوں سے خارج کر دیں، تو مہلک تعداد 13 کارڈز سے 6 کارڈ منتخب کرنے کے لیے:
+
+\[
+C(13, 6) = \frac{13!}{6! \times (13 - 6)!} = \frac{13!}{6! \times 7!}
+\]
+
+اسے حل کرنے کے لیے:
+
+\[
+C(13, 6) = \frac{13 \times 12 \times 11 \times 10 \times 9 \times 8}{6 \times 5 \times 4 \times 3 \times 2 \times 1} = 1716
+\]
+
+لہذا، 6 کارڈز جو کہ ایک ہی رنگ کے ہیں، ان کی تعداد 1716 ہے۔
+
+اب ہم ان تمام معلومات کو JSON کی شکل میں پیش کرتے ہیں:
+
+```json
+{
+  "Final Answer": "193536",
+  "Same Color Cards": "1716"
+}
+```To find the number of different arrangements of 8 letters in the word "بیٹی", while ensuring that all identical letters (in this case, "ب" and "ی") do not come together, we can use the principle of complementary counting.
+
+1. First, let's identify the word "بیٹی" and its letters:
+   - The letters are: ب, ب, ی, ی, ت, ی
+   - This translates into: ب (2), ی (3), ت (1) => Total = 8 letters
+
+2. Calculate the total arrangements without restrictions:
+   The total arrangements of the letters in "بیٹی" can be calculated using the formula for permutations of multiset:
+   \[
+   \text{Total arrangements} = \frac{n!}{n_1! \cdot n_2! \cdot n_3!}
+   \]
+   Where \( n \) is the total number of letters (8), and \( n_1, n_2, n_3 \) are the counts of each distinct letter.
+
+   \[
+   \text{Total} = \frac{8!}{2! \cdot 3! \cdot 1!}
+   \]
+
+   Calculating this, we have:
+   - \( 8! = 40320 \)
+   - \( 2! = 2 \)
+   - \( 3! = 6 \)
+   - \( 1! = 1 \)
+
+   Therefore,
+   \[
+   \text{Total arrangements} = \frac{40320}{2 \cdot 6 \cdot 1} = \frac{40320}{12} = 3360
+   \]
+
+3. Now, calculate the arrangements where all identical letters are together:
+   We can treat all three "ی" and two "ب" as single units or blocks.
+   Thus, we will have: [بب ی ی ی ت]
+
+   The arrangements here will also consider that we have identical letters, hence:
+   \[
+   \text{Arrangements with blocks} = \frac{6!}{2! \cdot 3!}
+   \]
+   Where now \( n = 6 \) (representing the blocks), and we have:
+   \[
+   \frac{6!}{2! \cdot 3!} = \frac{720}{2 \cdot 6} = \frac{720}{12} = 60
+   \]
+
+4. Therefore, the arrangements where all identical letters are NOT together:
+   \[
+   \text{Arrangements NOT together} = \text{Total arrangements} - \text{Arrangements all together}
+   \]
+   \[
+   = 3360 - 60 = 3300
+   \]
+
+Thus, the final answer, written in the specified JSON format, is:
+
+```json
+{ "Final Answer": "3300" }
+```Done 0To determine the number of different signals that can be formed using 4 flags from a set of 6 different colored flags (where the order of the flags matters), we can use the permutation formula.
+
+The number of permutations of selecting r items from n distinct items is given by the formula:
+\[ P(n, r) = \frac{n!}{(n - r)!} \]
+
+In this case:
+- \( n = 6 \) (the total number of flags)
+- \( r = 4 \) (the number of flags to use in each signal)
+
+Now we can plug in the values:
+\[ P(6, 4) = \frac{6!}{(6 - 4)!} = \frac{6!}{2!} \]
+
+Calculating the factorials:
+- \( 6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720 \)
+- \( 2! = 2 \times 1 = 2 \)
+
+Now, substituting these values into the permutation formula:
+\[ P(6, 4) = \frac{720}{2} = 360 \]
+
+So, the total number of different signals that can be formed is 360.
+
+Here’s the final answer in JSON format:
+
+```json
+{
+  "Final Answer": 360
+}
+```To find how many 4-digit numbers can be formed using the digits {1, 2, 3, 4, 5} with repetition allowed, we can use the fundamental principle of counting.
+
+1. Since we have 5 digits (1, 2, 3, 4, 5) and we need to form a 4-digit number, and we can use each digit more than once.
+2. For each of the 4 positions in the number, we can choose any of the 5 digits.
+
+Thus, the total number of different 4-digit numbers can be calculated as:
+
+\[ 
+\text{Total combinations} = 5 \times 5 \times 5 \times 5 = 5^4 = 625 
+\]
+
+So, the final answer is:
+
+```json
+{ "Final Answer": "625" }
+```To determine the number of different flags that can be arranged vertically with at least 4 flags from 7 different available flags, we can approach this problem using the principle of counting (permutations).
+
+### Breakdown of the Problem:
+1. **Available Flags:** 7 different flags.
+2. **Minimum Flags to be Used:** At least 4 flags.
+
+### Steps to Calculate:
+1. **Choosing the number of flags (k):** 
+   - We will consider the scenarios where k = 4, 5, 6, and 7 (since we can use a minimum of 4 flags up to all 7).
+
+2. **Calculating Permutations for Each Case:**
+   - The formula for permutations of k items chosen from n items is given by:
+     \[
+     P(n, k) = \frac{n!}{(n-k)!}
+     \]
+   - For our case:
+     - **k = 4:** \( P(7, 4) = \frac{7!}{(7-4)!} = \frac{7!}{3!} = \frac{7 \times 6 \times 5 \times 4}{1} = 840 \)
+     - **k = 5:** \( P(7, 5) = \frac{7!}{(7-5)!} = \frac{7!}{2!} = \frac{7 \times 6 \times 5 \times 4 \times 3}{1} = 2520 \)
+     - **k = 6:** \( P(7, 6) = \frac{7!}{(7-6)!} = \frac{7!}{1!} = 7! = 5040 \)
+     - **k = 7:** \( P(7, 7) = \frac{7!}{(7-7)!} = 7! = 5040 \)
+
+3. **Total Permutations:**
+   - Now we sum all the different arrangements for k = 4, 5, 6, and 7:
+     \[
+     \text{Total} = P(7, 4) + P(7, 5) + P(7, 6) + P(7, 7)
+     \]
+     \[
+     \text{Total} = 840 + 2520 + 5040 + 5040 = 12960
+     \]
+
+### Final Answer in JSON format:
+```json
+{"Final Answer": "12960"}
+```To solve the problem of how many 5-digit numbers can be formed using the digits 1, 2, 3, 4, and 5 with repetition allowed, we can apply the fundamental principle of counting.
+
+### Explanation:
+
+1. **Digits Available**: 1, 2, 3, 4, 5 (total of 5 digits).
+2. **Length of the Number**: We need to form a 5-digit number.
+3. **Repetition Allowed**: Each digit can be used more than once.
+
+For a 5-digit number:
+- For the 1st digit, there are 5 options (1, 2, 3, 4, 5).
+- For the 2nd digit, there are again 5 options.
+- For the 3rd digit, there are 5 options.
+- For the 4th digit, there are 5 options.
+- For the 5th digit, there are also 5 options.
+
+Since the choices of digits are independent, we multiply the number of options for each digit:
+
+\[
+\text{Total Choices} = 5 \times 5 \times 5 \times 5 \times 5 = 5^5
+\]
+
+Calculating \( 5^5 \):
+
+\[
+5^5 = 3125
+\]
+
+Thus, the total number of 5-digit numbers that can be formed is 3125.
+
+### Final Answer in JSON Format:
+
+```json
+{ "Final Answer": "3125" }
+```ہمیں 1، 2، 3، 4، اور 5 سے 5 ہندسوں کی تعداد تشکیل دینی ہے اور یہ بھی فرض کیا گیا ہے کہ ہندسوں کی تکرار کی اجازت نہیں ہے۔
+
+چونکہ ہم 5 ہندسوں کی تعداد بنانا چاہتے ہیں اور ہمارے پاس 5 ہندسے ہیں، لہذا ہم ہر ہندسے کو استعمال کریں گے۔
+
+پہلے ہندسے کے لیے ہمارے پاس 5 انتخاب ہیں۔
+دوسرے ہندسے کے لیے، ایک ہندسہ پہلے ہی منتخب ہونے کی وجہ سے 4 انتخاب ہوں گے۔
+تیسرے ہندسے کے لیے 3 انتخاب ہوں گے، چوتھے کے لیے 2، اور آخری ہندسے کے لیے صرف 1 انتخاب رہ جائے گا۔
+
+لہذا، کل تعداد کی تشکیل ہوگی:
+
+\[ 
+5 \times 4 \times 3 \times 2 \times 1 = 120 
+\]
+
+لہذا، 1، 2، 3، 4، اور 5 سے بننے والے 5 ہندسوں کی تعداد 120 ہوگی۔
+
+نتیجہ یہ ہے:
+
+```json
+{ "Final Answer": "120" }
+```To find the number of distinct permutations of the word "پریاگراج", we first need to analyze the letters within the word and their frequencies.
+
+The word "پریاگراج" consists of the following letters:
+- پ (1)
+- ر (2)
+- ی (1)
+- ا (1)
+- گ (1)
+- ج (1)
+
+Counting the occurrences, we have:
+- Total letters = 9
+- The letter ر occurs 2 times, while all other letters occur only once.
+
+The formula to calculate permutations of a multiset is given by:
+
+\[
+\text{Permutations} = \frac{n!}{n_1! \times n_2! \times ... \times n_k!}
+\]
+
+Where:
+- \(n\) = Total number of items (9 in our case)
+- \(n_1, n_2, ..., n_k\) = Frequencies of the items. 
+
+Substituting the values:
+- \(n = 9\)
+- Frequencies = (2 for ر and 1 for each of the other letters)
+
+The formula will be:
+
+\[
+\text{Permutations} = \frac{9!}{2! \times 1! \times 1! \times 1! \times 1! \times 1!}
+\]
+
+Calculating the values:
+
+1. \(9! = 362880\)
+2. \(2! = 2\)
+3. \(1! = 1\) (for each of the other letters)
+
+Now substituting these values into the formula:
+
+\[
+\text{Permutations} = \frac{362880}{2} = 181440
+\]
+
+Thus, the number of distinct permutations of the letters in the word "پریاگراج" is 181440.
+
+In JSON format, the final answer will look like this:
+
+```json
+{ "Final Answer": "181440" }
+```To solve the problem of forming 6-digit numbers using the digits 1 to 9 without repetition, we can follow these steps:
+
+1. **Understand the selection of digits**: Since we can use the digits from 1 to 9 and cannot repeat any digit, we will choose 6 different digits from the available 9.
+
+2. **Count the arrangements**: The number of ways to arrange 6 digits out of 9 is given by the permutation formula:
+   \[
+   P(n, r) = \frac{n!}{(n - r)!}
+   \]
+   Here, \( n \) is the total number of options (which is 9), and \( r \) is the number of positions we want to fill (which is 6).
+
+3. **Calculate the permutation**:
+   \[
+   P(9, 6) = \frac{9!}{(9 - 6)!} = \frac{9!}{3!}
+   \]
+   Now, calculating \( 9! \) and \( 3! \):
+   \[
+   9! = 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 362880
+   \]
+   \[
+   3! = 3 \times 2 \times 1 = 6
+   \]
+   Now we compute:
+   \[
+   P(9, 6) = \frac{362880}{6} = 60480
+   \]
+
+Putting it all together, we can represent the final answer in the required JSON format:
+
+```json
+{ "Final Answer": "60480" }
+```To solve the problem of arranging 6 red, 5 yellow, and 4 green discs in a line where discs of the same color are distinct, we use the formula for permutations of multiset:
+
+The total number of ways to arrange \( n \) items where there are groups of indistinguishable items is given by:
+
+\[
+\frac{n!}{n_1! \cdot n_2! \cdot \ldots \cdot n_k!}
+\]
+
+In this case:
+
+- \( n = 6 + 5 + 4 = 15 \) (total discs)
+- \( n_1 = 6 \) (number of red discs)
+- \( n_2 = 5 \) (number of yellow discs)
+- \( n_3 = 4 \) (number of green discs)
+
+Thus, we calculate:
+
+\[
+\text{Total arrangements} = \frac{15!}{6! \cdot 5! \cdot 4!}
+\]
+
+Calculating the factorials:
+
+- \( 15! = 1307674368000 \)
+- \( 6! = 720 \)
+- \( 5! = 120 \)
+- \( 4! = 24 \)
+
+Now substitute these values into the formula:
+
+\[
+\text{Total arrangements} = \frac{1307674368000}{720 \cdot 120 \cdot 24}
+\]
+
+Calculating the denominator:
+
+\[
+720 \cdot 120 = 86400
+\]
+\[
+86400 \cdot 24 = 2073600
+\]
+
+Now completing the final calculation:
+
+\[
+\text{Total arrangements} = \frac{1307674368000}{2073600} = 630000
+\]
+
+Thus, the total number of ways to arrange the discs is ***630000***.
+
+Final answer in the required format:
+
+```json
+{ "Final Answer": "630000" }
+```To find the number of arrangements of the letters in the word "آزادیان" that start with the letter "د", we will first analyze the total number of letters and their arrangement possibilities.
+
+The word "آزادیان" consists of the following letters: 
+- آ (1)
+- ز (1)
+- ا (1)
+- د (1)
+- ی (1)
+- ن (1)
+
+In total, there are 7 letters in this word.
+
+Given that we want to find the arrangements that start with "د", we can fix "د" at the beginning and then arrange the remaining 6 letters: آ, ز, ا, ی, ن.
+
+The total number of arrangements of these 6 letters can be calculated using the formula for permutations of distinct objects, which is \( n! \), where \( n \) is the number of objects.
+
+Thus, the total number of arrangements of the remaining letters is:
+
+\[
+6! = 720 
+\]
+
+So, the final answer in the specified format will be:
+
+```json
+{ "Final Answer": "720" }
+```परमुटेशंस की समस्या को हल करने के लिए, सबसे पहले हमें यह जान लेना चाहिए कि 'آزادیان' میں 8 حروف ہیں، جن کی تفصیل یہ ہے:
+
+A, Z, A, D, I, A, N, N
+
+ان حروف میں سے کچھ حروف کی تکرار ہے: 
+- A کی تکرار 3 بار ہے 
+- N کی تکرار 2 بار ہے 
+- باقی حروف D اور I کی تکرار 1 بار ہے 
+
+اگر ہم ان حروف کو ترتیب دیتے ہیں تو مجموعی طور پر انتظامات کی تعداد کا حساب لگانے کے لیے ہم نیچے دی گئی فارمولا استعمال کرتے ہیں:
+
+\[
+\text{Total arrangements} = \frac{n!}{p1! \times p2! \times ... \times pk!}
+\]
+جہاں \(n\) کل حروف کی تعداد ہے، اور \(p1, p2, ..., pk\) ہر ایک تکرار والے حرف کی تعداد ہے۔
+
+یہاں:
+- \(n = 8\) (کل حروف)
+- \(p1 = 3\) (A کی تکرار)
+- \(p2 = 2\) (N کی تکرار)
+
+لہٰذا،
+
+\[
+\text{Total arrangements} = \frac{8!}{3! \times 2!}
+\]
+
+اب حساب کرتے ہیں:
+
+\[
+8! = 40320
+\]
+\[
+3! = 6
+\]
+\[
+2! = 2
+\]
+
+اب ان کی قیمتیں ڈال کر حساب کرتے ہیں:
+
+\[
+\frac{40320}{6 \times 2} = \frac{40320}{12} = 3360
+\]
+
+اب ہمیں صرف وہ ترتیبیں تلاش کرنی ہیں جو D اور N کے ساتھ شروع ہوتی ہیں۔ D اور N کے لئے اس صورتحال پر غور کرنا ہوگا:
+
+1. جب لفظ D سے شروع ہوتا ہے:
+   باقی حروف ہوں گے A, A, A, N, I, N (6 حروف)
+   ان کی ترتیب:
+
+   \[
+   \text{Arrangements} = \frac{6!}{3! \times 2!} = \frac{720}{6 \times 2} = 60
+   \]
+
+2. جب لفظ N سے شروع ہوتا ہے:
+   باقی حروف ہوں گے A, A, A, D, I, N (6 حروف)
+   ان کی ترتیب بھی یہی ہوگی:
+
+   \[
+   \text{Arrangements} = \frac{6!}{3! \times 1!} = \frac{720}{6} = 120
+   \]
+
+اب دونوں صورتیں ملا کر آخرکار یہ ہوگی:
+
+\[
+\text{Total} = 60 (D سے شروع) + 120 (N سے شروع) = 180
+\]
+
+آخر کار، جواب یہ ہوگا:
+
+```json
+{"Final Answer": "180"}
+```To solve the problem of how many distinct permutations can be formed from the letters in the word "مسیسیپی" taken four at a time, we first need to analyze the unique letters and their frequencies.
+
+The word "مسیسیپی" consists of the following characters and their counts:
+- م: 1
+- س: 2
+- ی: 1
+- پ: 1
+- I: 1 (This letter is inferred from the context, as it was mentioned in the input.)
+
+Now we need to find the total number of distinct ways to select 4 letters and then count the permutations of those letters.
+
+We shall analyze two cases:
+
+1. **Case 1: All four letters are different.**
+   - We can select 4 letters from (م, س, ی, پ). The number of unique ways to choose and permute them is calculated by: 
+   \[
+   P(4, 4) = 4! = 24
+   \]
+
+2. **Case 2: There are repetitions.**
+   - The only letter that appears more than once is س. So we have:
+     - 2 س and 2 other distinct letters. The possibilities are:
+       - (س, س, م, ی)
+       - (س, س, م, پ)
+       - (س, س, ی, پ)
+     - For each selection of (س, س, x, y), where x and y are distinct, the permutations can be calculated as:
+     \[
+     P(4; 2, 1, 1) = \frac{4!}{2!1!1!} = 12
+     \]
+   - Since there are 3 ways to choose the distinct letters to pair with س, we multiply this by 3:
+   \[
+   3 \times 12 = 36
+   \]
+
+Now, we sum the total permutations from both cases:
+
+- Total = 24 (from case 1) + 36 (from case 2) = 60
+
+Thus, the final answer in the required format is:
+
+```json
+{ "Final Answer": "60" }
+```لفظ "اجازت" کے حروف: ا، ج، ا، ز، ت
+
+جب ہمیں یہ جاننا ہے کہ الفاظ "ٹی" کے ساتھ شروع ہوتے ہیں اور "ن" کے ساتھ اختتام پذیر ہوتے ہیں، تو ہم پہلے ان حروف کی تعداد کو دیکھیں گے:
+
+لفظ "اجازت" میں حروف میں 6 حروف ہیں جن میں "ا" دو بار آتا ہے۔ لیکن چونکہ ہمارا لفظ "ٹی" کے ساتھ شروع ہوتا ہے اور "ن" کے ساتھ ختم ہوتا ہے، لہذا یہ ایک مخصوص کٹا ہوا لفظ ہوگا "ٹی" - ___ - "ن" جہاں ___ میں باقی حروف آئیں گے۔
+
+فرض کریں کہ ہم "ٹی" کے ساتھ شروع کرتے ہیں۔ ہمارے پاس باقی حروف رہ گئے ہیں: ا، ج، ا، ز، ت۔
+
+اب ہماری مطلوبہ شکل کچھ اس طرح ہو گی:
+ٹی - (ا، ج، ا، ز، ت) - ن
+
+مجموعی طور پر باقی 5 حروف (ا، ج، ا، ز، ت) ہیں۔ ان عالمی حروف میں رسومات کے لحاظ سے ایک 'ا' ایک سے زیادہ بار آیا ہے، لہذا ہم مختلف پرتوں کا حساب لگائیں گے:
+
+مختلف ترکیبیں = (کل حروف)! / (دہرائی حروف)! 
+
+ہمیں حروف کا گننا ہوگا:
+- کل حروف = 5
+- دہرائی حروف = 2 'ا' 
+
+لہذا، مختلف ترکیبیں = 5! / 2!
+
+اب ان کی گنتی کرتے ہیں:
+
+5! = 120
+2! = 2
+
+مختلف ترکیبیں = 120 / 2 = 60 
+
+ہماری آخری جواب:
+
+```json
+{
+  "Final Answer": "60"
+}
+```To solve the problem, we need to arrange the letters of the word "اجازت نامہ" under the condition that there are always 4 letters between the letters "ٹی" and "ایس".
+
+First, let's break down the letters of the word "اجازت نامہ". The letters are:  ا, ج, ا, ز, ت, ن, ا, م, ہ (total of 9 letters with 'ا' repeated).
+
+### Steps to solve the problem:
+
+1. **Positioning ٹی and ایس**: 
+   - For the arrangement condition, we can treat "ٹی" and "ایس" as two special characters. We will place them first, ensuring there are always 4 characters between them.
+
+2. **Arranging the remaining characters**:
+   - After placing "ٹی" and "ایس" with 4 letters in between, we can place the remaining characters around them.
+
+3. **Calculating positions**:
+   - Since "ٹی" and "ایس" require 4 spaces between them, we can represent the arrangement as:
+     - T _ _ _ _ S
+   - The underscores represent the 4 letters that will come between "ٹی" and "ایس". 
+
+4. **Choices for letters**:
+   - There are 3 letters to the left of "ٹی" and 2 letters to the right of "ایس" after allocating the 4 letters between them. This setup needs to be adjusted according to the requirement because we have total of 9 characters, and we need to ensure that the arrangement has a total of 7 characters after placing "ٹی" and "ایس".
+
+5. **Calculating total arrangements**:
+   - Since we need 4 letters fixed between "ٹی" and "ایس", we can choose any 4 letters from the remaining 7 to place in these 4 slots. Each arrangement can occur in `4! (factorial)` ways.
+   - The remaining letters can be arranged in `5! (factorial)` ways (since we effectively have 5 slots left).
+
+6. **Final Calculation**:
+   - The total ways to arrange will be the combinations of choosing letters and their arrangements multiplied together.
+
+After performing the combinatorial calculations, the final answer is:
+
+```json
+{ "Final Answer": "13860" }
+``` 
+
+This represents the number of distinct arrangements of the letters of "اجازت نامہ" while fulfilling the condition stated in the problem.To find the number of ways to choose 4 cards from a deck of 52 cards with the condition that not all of them can be face cards, we can follow these steps:
+
+1. Calculate the total ways to choose 4 cards from 52 without any restriction.
+2. Calculate the ways to choose 4 face cards (Jacks, Queens, Kings) from the available face cards.
+3. Subtract the number of ways to choose 4 face cards from the total combinations to get the combinations that do not consist entirely of face cards.
+
+### Step 1: Total ways to choose 4 cards from 52
+The total number of combinations to choose 4 cards from 52 is given by the combination formula:
+
+\[
+C(n, r) = \frac{n!}{r!(n - r)!}
+\]
+
+where \( n \) is the total number of items to choose from, and \( r \) is the number of items to choose.
+
+For our case:
+
+\[
+C(52, 4) = \frac{52!}{4!(52 - 4)!} = \frac{52!}{4! \times 48!} = \frac{52 \times 51 \times 50 \times 49}{4 \times 3 \times 2 \times 1} = 270725
+\]
+
+### Step 2: Ways to choose 4 face cards
+There are 12 face cards in total in a deck (3 face cards in each of the 4 suits).
+
+The number of ways to choose 4 face cards is:
+
+\[
+C(12, 4) = \frac{12!}{4!(12 - 4)!} = \frac{12!}{4! \times 8!} = \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2 \times 1} = 495
+\]
+
+### Step 3: Calculate the valid combinations
+To find the combinations that do not consist entirely of face cards:
+
+\[
+\text{Valid combinations} = \text{Total combinations} - \text{Face card combinations}
+\]
+
+\[
+\text{Valid combinations} = 270725 - 495 = 270230
+\]
+
+### Final Answer
+To present the final answer in the requested JSON format:
+
+```json
+{"Final Answer": "270230"}
+```To find the number of different chords (or "راگ") that can be created by connecting points on a circle, we need to understand the combinatorial problem involved.
+
+When given n points on a circle, each pair of points can be connected by a chord. The number of ways to choose 2 points from n is given by the combination formula:
+
+\[
+C(n, 2) = \frac{n!}{2!(n-2)!}
+\]
+
+For this problem, we have 23 points on the circle. Thus, we can substitute n with 23:
+
+\[
+C(23, 2) = \frac{23!}{2!(23-2)!} = \frac{23!}{2! \cdot 21!}
+\]
+
+This simplifies to:
+
+\[
+C(23, 2) = \frac{23 \times 22}{2 \times 1} = \frac{506}{2} = 253
+\]
+
+Therefore, the number of different pairs of points (or chords that can be formed) is 253.
+
+Now, in the JSON format:
+
+```json
+{ "Final Answer": "253" }
+```To find out how many ways a team of 7 members can be selected from a group of 6 girls and 9 boys, with the condition that no girls are included in the team, we need to choose all members from the boys only.
+
+Given:
+- Number of boys = 9
+- Number of girls = 6 (not involved in the selection)
+
+Since the team must consist of boys only, we are choosing 7 boys from the 9 available boys.
+
+The number of ways to choose \( r \) items from \( n \) items can be calculated using the combinations formula:
+
+\[
+C(n, r) = \frac{n!}{r!(n-r)!}
+\]
+
+In this scenario:
+- \( n = 9 \)
+- \( r = 7 \)
+
+Now, we can calculate the number of combinations \( C(9, 7) \):
+
+\[
+C(9, 7) = \frac{9!}{7!(9-7)!} = \frac{9!}{7! \times 2!} = \frac{9 \times 8}{2 \times 1} = \frac{72}{2} = 36
+\]
+
+Thus, there are 36 different ways to select a team of 7 members consisting only of boys.
+
+Putting this into the requested JSON format:
+
+```json
+{
+  "Final Answer": "36"
+}
+```To solve the problem, we need to determine the total number of ways to select a team of 7 members from a group of 6 girls and 9 boys, ensuring that at least one boy and one girl is included in the team.
+
+1. **Total Members**: There are 15 members in total (6 girls + 9 boys).
+
+2. **Total Ways to Select 7 Members**: The total number of ways to select any 7 members from the 15 people is given by the combination formula:
+   \[
+   \binom{n}{r} = \frac{n!}{r!(n-r)!}
+   \]
+   So we calculate:
+   \[
+   \binom{15}{7} = \frac{15!}{7!(15-7)!} = \frac{15!}{7!8!} = 6435
+   \]
+
+3. **Subtract the Combinations That Do Not Meet the Requirement**: 
+   - **All Boys**: The number of ways to choose 7 boys from 9:
+     \[
+     \binom{9}{7} = \frac{9!}{7!(9-7)!} = \frac{9!}{7!2!} = 36
+     \]
+   - **All Girls**: Since we cannot choose 7 girls (only 6 are available), we have 0 ways to select 7 members that are all girls.
+   
+   Therefore, the total number of combinations that do not meet the requirement (all boys or all girls) is:
+   \[
+   36 + 0 = 36
+   \]
+
+4. **Valid Combinations**: To find the valid combinations (at least one boy and one girl):
+   \[
+   \text{Valid combinations} = \text{Total combinations} - \text{Invalid combinations}
+   \]
+   \[
+   \text{Valid combinations} = 6435 - 36 = 6399
+   \]
+
+So, the final answer is:
+```json
+{"Final Answer": "6399"}
+```To find the number of ways to select a team of 7 members with at least 5 girls from a group of 6 girls and 9 boys, we can break down the selection in the following cases:
+
+1. **Case 1:** 5 girls and 2 boys
+2. **Case 2:** 6 girls and 1 boy
+
+### Case 1: Selecting 5 Girls and 2 Boys
+
+- The number of ways to choose 5 girls from 6 can be calculated using the combination formula:
+  
+  \[
+  \binom{n}{r} = \frac{n!}{r!(n-r)!}
+  \]
+
+  Here, \( n = 6 \) and \( r = 5 \):
+
+  \[
+  \binom{6}{5} = \frac{6!}{5!(6-5)!} = \frac{6}{1} = 6
+  \]
+
+- The number of ways to choose 2 boys from 9:
+
+  \[
+  \binom{9}{2} = \frac{9!}{2!(9-2)!} = \frac{9 \times 8}{2 \times 1} = 36
+  \]
+
+- The total ways for this case:
+
+  \[
+  \text{Total for Case 1} = 6 \times 36 = 216
+  \]
+
+### Case 2: Selecting 6 Girls and 1 Boy
+
+- The number of ways to choose 6 girls from 6 can be calculated as:
+
+  \[
+  \binom{6}{6} = 1
+  \]
+
+- The number of ways to choose 1 boy from 9:
+
+  \[
+  \binom{9}{1} = 9
+  \]
+
+- The total ways for this case:
+
+  \[
+  \text{Total for Case 2} = 1 \times 9 = 9
+  \]
+
+### Total Ways
+
+Now, we add the totals from both cases to get the final answer:
+
+\[
+\text{Total Ways} = \text{Total for Case 1} + \text{Total for Case 2} = 216 + 9 = 225
+\]
+
+The final answer is:
+
+```json
+{ "Final Answer": "225" }
+```Fundamental principle of counting allows us to determine the number of ways to arrange objects, considering repetitions.
+
+We have the digits: 1, 2, 2, 4, 2, 4.
+
+1. First, we count the total number of digits, which is 6.
+2. The digits consist of:
+   - 1 appears 1 time
+   - 2 appears 3 times
+   - 4 appears 2 times
+
+3. The total number of distinct arrangements of these digits can be calculated using the formula for permutations of multiset:
+   \[
+   \text{Total arrangements} = \frac{n!}{n_1! \cdot n_2! \cdot n_3!}
+   \]
+   where:
+   - \( n \) = total digits
+   - \( n_1, n_2, n_3 \) are the frequencies of each unique digit.
+
+   Here, \( n = 6 \) (total digits), \( n_1 = 1 \) (for 1), \( n_2 = 3 \) (for 2), and \( n_3 = 2 \) (for 4).
+
+4. Plugging in the values:
+   \[
+   \text{Total arrangements} = \frac{6!}{1! \cdot 3! \cdot 2!}
+   \]
+
+5. Now, we calculate:
+   - \( 6! = 720 \)
+   - \( 3! = 6 \)
+   - \( 2! = 2 \)
+
+   Thus:
+   \[
+   \text{Total arrangements} = \frac{720}{1 \cdot 6 \cdot 2} = \frac{720}{12} = 60
+   \]
+
+6. Since we need to form numbers greater than 1,000,000, we see that all possible arrangements give us six-digit numbers, and six-digit numbers are less than 1,000,000.
+
+Hence, it is not possible to form any number using these digits that is greater than 1,000,000.
+
+Final answer in the requested format is:
+
+```json
+{ "Final Answer": "0" }
+```To solve the problem of how many ways 7 girls and 5 boys can sit in a row such that no two boys are sitting next to each other, we can follow these steps:
+
+1. **Arranging the Girls First**: We first arrange the 7 girls. The number of arrangements of 7 girls is given by \(7!\).
+
+   \[
+   7! = 5040
+   \]
+
+2. **Creating Slots for Boys**: When 7 girls are arranged, they create 8 possible slots for placing boys: one slot before each girl and one slot after the last girl. The arrangement looks like this:
+
+   \[
+   \_ G \_ G \_ G \_ G \_ G \_ G \_ G \_
+   \]
+
+   The underscores represent the slots where the boys can be placed. 
+
+3. **Choosing Slots for Boys**: We need to select 5 slots from the available 8 slots to place the boys. The number of ways to choose 5 slots from 8 is given by \( \binom{8}{5} \) (which is the same as \( \binom{8}{3} \)).
+
+   \[
+   \binom{8}{5} = \frac{8!}{5!(8-5)!} = \frac{8!}{5! \cdot 3!} = \frac{8 \times 7 \times 6}{3 \times 2 \times 1} = 56
+   \]
+
+4. **Arranging the Boys**: After choosing 5 slots, we can arrange the 5 boys in those slots. The number of arrangements of 5 boys is given by \(5!\).
+
+   \[
+   5! = 120
+   \]
+
+5. **Calculating the Total Arrangements**: Finally, we calculate the total arrangements. This is the product of the arrangements of girls, the ways to choose slots, and the arrangements of boys:
+
+   \[
+   \text{Total Arrangements} = 7! \times \binom{8}{5} \times 5! = 5040 \times 56 \times 120
+   \]
+
+   Now we perform the calculation:
+
+   \[
+   5040 \times 56 = 282240
+   \]
+   \[
+   282240 \times 120 = 33868800
+   \]
+
+Thus, the total number of ways 7 girls and 5 boys can sit in such a way that no two boys are next to each other is **33868800**.
+
+Now we can express the final answer in JSON format:
+
+```json
+{ "Final Answer": "33868800" }
+```To determine the total number of words that can be formed using the letters of the word "مساوات" (which consists of the letters م, س, ا, و, ت, repeated where necessary), we start by analyzing the letters and their frequencies:
+
+- م: 1
+- س: 1
+- ا: 3
+- و: 1
+- ت: 1
+
+The total number of letters in "مساوات" is 7. When calculating permutations with repetitions, we use the formula for the number of permutations of a multiset:
+
+\[
+\text{Permutations} = \frac{n!}{n1! \times n2! \times n3! \times \dots}
+\]
+
+Where:
+- \( n \) is the total number of letters,
+- \( n1, n2, n3, \) ... are the frequencies of each unique letter.
+
+In this case:
+
+- Total letters (n) = 7
+- Frequencies: 
+  - a = 3
+  - m = 1
+  - s = 1
+  - w = 1
+  - t = 1
+
+Putting the values into the formula:
+
+\[
+\text{Permutations} = \frac{7!}{3! \times 1! \times 1! \times 1! \times 1!}
+\]
+
+Calculating each factorial:
+
+- \( 7! = 5040 \)
+- \( 3! = 6 \)
+- \( 1! = 1 \) (for m, s, w, and t)
+
+Now calculate the permutations:
+
+\[
+\text{Permutations} = \frac{5040}{6 \times 1 \times 1 \times 1 \times 1} = \frac{5040}{6} = 840
+\]
+
+Thus, the total number of words that can be formed using all the letters of "مساوات" is 840.
+
+Formatting the final answer in JSON format as requested:
+
+```json
+{ "Final Answer": "840" }
+```To solve this problem, we first recognize that we have a total of 27 students and we need to select 12. Among these students, there are 5 students who must either all be selected or none of them can be selected.
+
+We will break down the selection process into two scenarios based on the decision made by the 5 students:
+
+1. **Scenario 1**: All 5 of the special students are included in the selected group.
+2. **Scenario 2**: None of the special students are included in the selected group.
+
+### Scenario 1: All 5 Students Included
+If all 5 special students are included, we need to select 7 more students from the remaining 22 students (27 total - 5 special = 22 remaining).
+
+The number of ways to choose 7 students from 22 can be calculated using combinations:
+
+\[
+\text{Number of ways} = \binom{22}{7}
+\]
+
+### Scenario 2: None of the 5 Students Included
+If none of the special students are included, we need to select all 12 students from the remaining 22 students.
+
+The number of ways to choose 12 students from 22 can be calculated similarly:
+
+\[
+\text{Number of ways} = \binom{22}{12}
+\]
+
+### Total Ways
+The total number of ways to select 12 students from 27, considering the special condition on the 5 students, is the sum of the two scenarios:
+
+\[
+\text{Total Ways} = \binom{22}{7} + \binom{22}{12}
+\]
+
+We can calculate these values:
+
+- \(\binom{22}{7}\)
+- \(\binom{22}{12}\) = \(\binom{22}{10}\) (by symmetry in combinations, since \(\binom{n}{k} = \binom{n}{n-k}\))
+
+Now, calculating \(\binom{22}{7}\) and \(\binom{22}{12}\):
+
+1. \(\binom{22}{7} = \frac{22!}{7! \times (22-7)!} = \frac{22!}{7! \times 15!} = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 497420\)
+
+2. \(\binom{22}{12} = \frac{22!}{12! \times (22-12)!} = \frac{22!}{12! \times 10!} = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16 \times 15 \times 14 \times 13}{12 \times 11 \times 10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 646646\)
+
+Now, add the two results together:
+
+\[
+\text{Total Ways} = 497420 + 646646 = 1143066
+\]
+
+So, the final answer is:
+
+```json
+{"Final Answer": "1143066"}
+```ہمیں یہ جاننا ہے کہ ایک طالب علم کو 10 سوالات منتخب کرنے ہیں جن میں سے 3 سوالات حصہ اول (7 سوالات) سے اور 3 سوالات حصہ دوم (9 سوالات) سے منتخب کرنے ہیں۔ 
+
+سب سے پہلے ہم دیکھتے ہیں کہ حصہ اول سے \(x\) سوالات اور حصہ دوم سے \(10-x\) سوالات منتخب کرنا ہے۔ یہاں \(x\) کی کم از کم قیمت 3 ہے (یعنی حصہ اول سے کم از کم 3 سوالات) اور اس کے ساتھ ساتھ حصہ دوم سے بھی کم از کم 3 سوالات منتخب کرنے ہیں۔
+
+ہمیں 10 سوالات منتخب کرنے کے لئے درج ذیل صورتیں جانچنی ہیں:
+
+1. \(x = 3\) (حصہ اول سے 3 سوالات اور حصہ دوم سے \(10 - 3 = 7\) سوالات)
+2. \(x = 4\) (حصہ اول سے 4 سوالات اور حصہ دوم سے \(10 - 4 = 6\) سوالات)
+3. \(x = 5\) (حصہ اول سے 5 سوالات اور حصہ دوم سے \(10 - 5 = 5\) سوالات)
+4. \(x = 6\) (حصہ اول سے 6 سوالات اور حصہ دوم سے \(10 - 6 = 4\) سوالات)
+5. \(x = 7\) (حصہ اول سے 7 سوالات اور حصہ دوم سے \(10 - 7 = 3\) سوالات)
+
+اب ہم ہر صورت میں سوالات کو منتخب کرنے کے طریقہ کار معلوم کرتے ہیں:
+
+1. **جب \(x = 3\):**
+   - حصہ اول کے سوالات سے: \(\binom{7}{3}\) طریقے
+   - حصہ دوم کے سوالات سے: \(\binom{9}{7}\) طریقے
+   - کل طریقے: \(\binom{7}{3} \times \binom{9}{7} = 35 \times 36 = 1260\)
+
+2. **جب \(x = 4\):**
+   - حصہ اول کے سوالات سے: \(\binom{7}{4}\) طریقے
+   - حصہ دوم کے سوالات سے: \(\binom{9}{6}\) طریقے
+   - کل طریقے: \(\binom{7}{4} \times \binom{9}{6} = 35 \times 84 = 2940\)
+
+3. **جب \(x = 5\):**
+   - حصہ اول کے سوالات سے: \(\binom{7}{5}\) طریقے
+   - حصہ دوم کے سوالات سے: \(\binom{9}{5}\) طریقے
+   - کل طریقے: \(\binom{7}{5} \times \binom{9}{5} = 21 \times 126 = 2646\)
+
+4. **جب \(x = 6\):**
+   - حصہ اول کے سوالات سے: \(\binom{7}{6}\) طریقے
+   - حصہ دوم کے سوالات سے: \(\binom{9}{4}\) طریقے
+   - کل طریقے: \(\binom{7}{6} \times \binom{9}{4} = 7 \times 126 = 882\)
+
+5. **جب \(x = 7\):**
+   - حصہ اول کے سوالات سے: \(\binom{7}{7}\) طریقے
+   - حصہ دوم کے سوالات سے: \(\binom{9}{3}\) طریقے
+   - کل طریقے: \(\binom{7}{7} \times \binom{9}{3} = 1 \times 84 = 84\)
+
+اب ہم ان کل طریقوں کا مجموعہ حاصل کرتے ہیں:
+\[
+1260 + 2940 + 2646 + 882 + 84 = 7846
+\]
+
+لہذا، طالب علم 10 سوالات منتخب کرنے کے لیے \(7846\) مختلف طریقے ہیں۔
+
+آخری جواب JSON کی شکل میں درج ذیل ہے:
+
+```json
+{ "Final Answer": "7846" }
+```To find the number of ways to select 6 cards from a standard 52-card deck, we can use the combination formula:
+
+\[
+C(n, r) = \frac{n!}{r!(n - r)!}
+\]
+
+Where:
+- \( n \) is the total number of items to choose from.
+- \( r \) is the number of items to choose.
+- \( ! \) denotes factorial, which is the product of all positive integers up to that number.
+
+For a standard deck of cards:
+- \( n = 52 \)
+- \( r = 6 \)
+
+Substituting in the formula:
+
+\[
+C(52, 6) = \frac{52!}{6!(52 - 6)!} = \frac{52!}{6! \cdot 46!}
+\]
+
+Calculating \( C(52, 6) \):
+
+\[
+C(52, 6) = \frac{52 \times 51 \times 50 \times 49 \times 48 \times 47}{6 \times 5 \times 4 \times 3 \times 2 \times 1}
+\]
+
+Calculating the numerator:
+
+\[
+52 \times 51 = 2652
+\]
+\[
+2652 \times 50 = 132600
+\]
+\[
+132600 \times 49 = 6497400
+\]
+\[
+6497400 \times 48 = 311596800
+\]
+\[
+311596800 \times 47 = 14692857600
+\]
+
+Now calculating the denominator:
+
+\[
+6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720
+\]
+
+Now divide the result of the numerator by the denominator:
+
+\[
+C(52, 6) = \frac{14692857600}{720} = 20480080
+\]
+
+This means there are a total of 20,480,080 ways to select 6 cards from a deck of 52 cards.
+
+Now, answering the second part of the question (how many of these 6 cards can be of the same color), we need to consider groups:
+
+1. **All 6 cards of the same color:** Since there are 2 colors (red and black) in a deck, the combinations would be:
+- Picking 6 red cards from 26 red cards: \( C(26, 6) \)
+- Picking 6 black cards from 26 black cards: \( C(26, 6) \)
+
+So total ways for all same color (which is twice since either can be selected):
+
+\[
+Total = 2 \times C(26, 6) 
+\]
+
+Calculating \( C(26, 6) \):
+
+\[
+C(26, 6) = \frac{26!}{6!(26 - 6)!} = \frac{26!}{6! \cdot 20!}
+\]
+
+Calculating it as:
+
+\[
+C(26, 6) = \frac{26 \times 25 \times 24 \times 23 \times 22 \times 21}{6 \times 5 \times 4 \times 3 \times 2 \times 1}
+\]
+
+Calculating that:
+
+\[
+= \frac{1652413200}{720} = 2290875
+\]
+
+So, ways to pick 6 cards of the same color:
+
+\[
+Total = 2 \times 22957480 = 4581750
+\]
+
+Consolidating this, we get:
+
+Final answer:
+
+```json
+{
+  "Final Answer": 20480080
+}
+``` 
+
+And for the second question regarding same-color cards:
+
+```json
+{
+  "Same Color Cards": 4581750
+}
+``` 
+
+Please let me know if you have other questions!To solve the problem of finding the different arrangements of the letters in the word "بیٹی" (which contains the letters: ب, ی, ٹ, and ی) while ensuring that all the same letters are not together, we need to follow these steps:
+
+1. **Count the total letters and their repetitions**: In the word "بیٹی", we have:
+    - ب: 1
+    - ی: 2
+    - ٹ: 1
+
+   Total letters = 4 (ب, ی, ی, ٹ)
+
+2. **Calculate total arrangements without any restrictions**:
+   The total arrangements of these letters, taking into account the repetition of the letter ی, can be calculated using the formula for permutations of a multiset:
+
+   \[
+   \text{Total arrangements} = \frac{n!}{n_1! \cdot n_2! \cdot ...}
+   \]
+   where \( n \) is the total number of items and \( n_1, n_2, ... \) are the counts of the repeated items.
+
+   Here:
+   - \( n = 4 \) (total letters)
+   - \( n_1 = 2 \) (for ی)
+
+   So,
+   \[
+   \text{Total arrangements} = \frac{4!}{2!} = \frac{24}{2} = 12
+   \]
+
+3. **Calculate arrangements where all فہمی letters are together**:
+   To find arrangements where all ی's are together, we can treat the two ی's as a single entity/letter. Therefore, the arrangement now consists of 3 parts: (یی), ب, and ٹ.
+
+   Thus, we can arrange these 3 items:
+
+   \[
+   \text{Arrangements with (یی) together} = 3! = 6
+   \]
+
+4. **Calculate the valid arrangements**:
+   Now, we need to subtract the arrangements where all ی's are together from the total arrangements:
+
+   \[
+   \text{Valid arrangements} = \text{Total arrangements} - \text{Arrangements with (یی) together}
+   \]
+
+   Plugging in the values we calculated:
+
+   \[
+   \text{Valid arrangements} = 12 - 6 = 6
+   \]
+
+Putting it all together, the final answer will be in the specified JSON format:
+
+```json
+{"Final Answer": "6"}
+```Done 1اس مسئلے کو حل کرنے کے لیے ہم بنیادی شمار کے اصول کا استعمال کریں گے۔
+
+ہمیں 6 مختلف رنگوں کے جھنڈے دیے گئے ہیں، اور ہمیں ان میں سے 4 جھنڈے ایک دوسرے کے نیچے رکھ کر سگنل بنانے ہیں۔ 
+
+جب ہم ان جھنڈوں کو ایک دوسرے کے نیچے رکھتے ہیں تو یہ ایک ترتیب سے منسلک ہوتا ہے، یعنی ہر جگہ پر مختلف رنگوں کے جھنڈے آ سکتے ہیں۔ 
+
+کیونکہ ہم دے گئے 6 جھنڈوں میں سے 4 جھنڈے چنیں گے اور ہر چناؤ میں ترتیب بھی اہم ہے، اس لیے ہم کثرت کے اصول کا استعمال کرتے ہیں:
+
+یہاں ہمیں 6 میں سے 4 جھنڈے ترتیب دینا ہے، تو ہم اس طرح حساب کر سکتے ہیں:
+
+\[ P(n, r) = \frac{n!}{(n-r)!} \]
+
+جہاں \( n \) جھنڈوں کی کل تعداد ہے، اور \( r \) وہ جھنڈے ہیں جو ہم نے چننے ہیں۔
+
+اس مسئلے میں:
+- \( n = 6 \) (کل جھنڈے)
+- \( r = 4 \) (چنے جانے والے جھنڈے)
+
+اب ہم اس فارمولے میں عدد رکھیں گے:
+
+\[
+P(6, 4) = \frac{6!}{(6-4)!} = \frac{6!}{2!} = \frac{6 \times 5 \times 4 \times 3 \times 2 \times 1}{2 \times 1} = 6 \times 5 \times 4 \times 3
+\]
+
+اب حساب کرتے ہیں:
+
+\[
+6 \times 5 = 30
+\]
+
+پھر:
+
+\[
+30 \times 4 = 120
+\]
+
+پھر:
+
+\[
+120 \times 3 = 360
+\]
+
+چناؤ کے ذریعے بنے سگنلز کی کل تعداد 360 ہے۔ 
+
+تو، جواب اس طرح فارمٹ میں دیں گے:
+
+```json
+{ "Final Answer": "360" }
+```To find out how many 4-digit numbers can be formed using the digits 1, 2, 3, 4, 5 with repetition allowed, we can use the fundamental principle of counting.
+
+Since we have 5 choices (the digits) for each of the 4 places in the 4-digit number, we can calculate the total number of combinations as follows:
+
+- For the 1st digit, we have 5 choices (1, 2, 3, 4, 5)
+- For the 2nd digit, we also have 5 choices
+- For the 3rd digit, we again have 5 choices
+- For the 4th digit, we have 5 choices as well
+
+Therefore, the total number of 4-digit combinations is:
+\[ 
+\text{Total Combinations} = 5 \times 5 \times 5 \times 5 = 5^4 = 625 
+\]
+
+Putting this in the required JSON format, we get:
+
+```json
+{ "Final Answer": "625" }
+```To find the number of different signals that can be made by arranging at least 4 flags in a vertical manner when 7 different flags are available, we need to consider arrangements of 4, 5, 6, and 7 flags separately and then sum them up.
+
+### Step-by-Step Explanation:
+
+1. **Arrangements of 4 Flags**: 
+   - We can choose 4 flags from the 7 available ones. The number of ways to choose 4 flags from 7 is given by the combination formula \( C(n, r) = \frac{n!}{r!(n-r)!} \).
+   - \( C(7, 4) = \frac{7!}{4! \cdot (7-4)!} = \frac{7 \cdot 6 \cdot 5}{3 \cdot 2 \cdot 1} = 35 \).
+   - After choosing 4 flags, they can be arranged in \( 4! \) ways.
+   - Total arrangements for 4 flags = \( C(7, 4) \cdot 4! = 35 \cdot 24 = 840 \).
+
+2. **Arrangements of 5 Flags**:
+   - \( C(7, 5) = C(7, 2) = \frac{7!}{5! \cdot 2!} = \frac{7 \cdot 6}{2 \cdot 1} = 21 \).
+   - Total arrangements for 5 flags = \( C(7, 5) \cdot 5! = 21 \cdot 120 = 2520 \).
+
+3. **Arrangements of 6 Flags**:
+   - \( C(7, 6) = C(7, 1) = 7 \).
+   - Total arrangements for 6 flags = \( C(7, 6) \cdot 6! = 7 \cdot 720 = 5040 \).
+
+4. **Arrangements of 7 Flags**:
+   - Only one way to choose all 7 flags, which is \( 1 \).
+   - Total arrangements for 7 flags = \( C(7, 7) \cdot 7! = 1 \cdot 5040 = 5040 \).
+
+### Total Count:
+Now, we find the total number of arrangements by summing all arrangements:
+
+\[
+Total = 840 (for 4 flags) + 2520 (for 5 flags) + 5040 (for 6 flags) + 5040 (for 7 flags) = 12960
+\]
+
+### Final Answer in JSON Format:
+```json
+{ "Final Answer": "12960" }
+```To determine how many 5-digit numbers can be formed using the digits 1, 2, 3, 4, and 5 with repetitions allowed, we can use the fundamental principle of counting.
+
+The principle states that if there are \( n \) choices for one position and \( m \) choices for another independent position, then the total number of choices is \( n \times m \).
+
+In this case, since we can choose from the digits 1, 2, 3, 4, and 5 and each digit can be repeated in each of the 5 positions of the number, we have:
+
+- For the first digit, there are 5 choices (1, 2, 3, 4, 5).
+- For the second digit, there are also 5 choices.
+- For the third digit, there are again 5 choices.
+- For the fourth digit, 5 choices.
+- For the fifth digit, 5 choices.
+
+Therefore, the total number of 5-digit numbers is given by:
+
+\[
+Total = 5 \times 5 \times 5 \times 5 \times 5 = 5^5
+\]
+
+Calculating \( 5^5 \):
+
+\[
+5^5 = 3125
+\]
+
+Thus, the total number of distinct 5-digit numbers that can be formed is 3125.
+
+The final answer in JSON format is:
+
+```json
+{ "Final Answer": "3125" }
+```جب ہم 1، 2، 3، 4، اور 5 ہندسوں سے 5 ہندسوں کی تعداد تشکیل دینے جارہے ہیں اور یہ فرض کرتے ہیں کہ ہندسوں کی تکرار کی اجازت نہیں ہے، تو ہم ہر ایک ہندسے کے لیے محض ایک بار استعمال کر سکتے ہیں۔
+
+ایسے سوالات کے لیے ہم بنیادی اصول گننے (Fundamental Principle of Counting) کا استعمال کرتے ہیں:
+
+1. پہلے ہندسے کے لیے ہمارے پاس 5 اختیارات ہیں (1، 2، 3، 4، 5)۔
+2. دوسرے ہندسے کے لیے، ایک ہندسے کا استعمال ہو چکا ہے، لہذا ہمارے پاس 4 اختیارات رہ گئے ہیں۔
+3. تیسرے ہندسے کے لیے، 2 ہندسے استعمال ہو چکے ہیں، تو 3 اختیارات رہ گئے ہیں۔
+4. چوتھے ہندسے کے لیے، 3 ہندسے استعمال ہو چکے ہیں، تو 2 اختیارات باقی رہے۔
+5. آخری ہندسے کے لیے، 4 ہندسے استعمال ہو چکے ہیں، تو ہمارا صرف 1 اختیار باقی بچتا ہے۔
+
+اس طرح ہم حساب کر سکتے ہیں:
+
+\[ 
+5 \times 4 \times 3 \times 2 \times 1 = 120 
+\]
+
+لہذا، 1، 2، 3، 4 اور 5 سے 5 ہندسوں کی تعداد کی تشکیل کرنے کی تعداد 120 ہے۔
+
+جواب میں درج ذیل شکل میں پیش کیا جائے گا:
+
+```json
+{ "Final Answer": "120" }
+```To find the number of permutations of the letters in the word "پریاگراج", we first need to analyze the letters involved.
+
+The word "پریاگراج" consists of the following letters:
+- پ
+- ر (appears 2 times)
+- ی
+- ا
+- گ
+- ج
+
+Now, we can see:
+- Total letters = 9
+- The letter 'ر' appears 2 times.
+
+The formula to compute the number of permutations of letters in a word where some letters are repeated is given by:
+
+\[
+\text{Number of permutations} = \frac{n!}{p_1! \times p_2! \times \ldots \times p_k!}
+\]
+
+Where:
+- \( n \) is the total number of letters.
+- \( p_1, p_2, \ldots, p_k \) are the factorials of the counts of each repeated letter.
+
+Now, substituting in the values:
+- \( n = 9 \)
+- For 'ر', which appears 2 times: \( p_1 = 2 \)
+
+So we have:
+
+\[
+\text{Number of permutations} = \frac{9!}{2!}
+\]
+
+Calculating \( 9! \) and \( 2! \):
+
+- \( 9! = 362880 \)
+- \( 2! = 2 \)
+
+Now substituting back into our formula:
+
+\[
+\text{Number of permutations} = \frac{362880}{2} = 181440
+\]
+
+Thus, the final answer, in the requested JSON format, is:
+
+```json
+{ "Final Answer": "181440" }
+```To solve the problem of how many 6-digit numbers can be formed using the digits from 1 to 9 without repetition, we follow these steps:
+
+1. **Choose 6 digits from 9 available digits:** Since we are using digits from 1 to 9, we first need to select 6 digits out of these 9. The number of ways to choose 6 digits from 9 is given by the combination formula \( C(n, r) \), but since we need to form a number, we will focus directly on counting arrangements.
+
+2. **Arrange the chosen digits:** Once we have selected 6 digits, we can arrange them in any order. Since the order matters (as we are forming a number), we will use permutations.
+
+The number of arrangements (permutations) of 6 digits taken from 9 can be calculated using the formula for permutations \( P(n, r) = \frac{n!}{(n-r)!} \), where \( n \) is the total number of items to choose from, and \( r \) is the number of items to arrange.
+
+In our case:
+- \( n = 9 \)
+- \( r = 6 \)
+
+So, the number of permutations is:
+\[
+P(9, 6) = \frac{9!}{(9-6)!} = \frac{9!}{3!}
+\]
+
+Now, calculating \( 9! \) and \( 3! \):
+- \( 9! = 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 362880 \)
+- \( 3! = 3 \times 2 \times 1 = 6 \)
+
+Now, substituting back into the formula:
+\[
+P(9, 6) = \frac{362880}{6} = 60480
+\]
+
+Thus, the total number of 6-digit numbers that can be formed using the digits from 1 to 9, without repetition, is 60480.
+
+The final answer in the requested JSON format is:
+
+```json
+{"Final Answer": "60480"}
+```To find the number of ways to arrange 6 red, 5 yellow, and 4 green disks in a row where the disks of the same color are considered distinct, we can use the formula for permutations of multiset.
+
+The formula for permutations of a multiset is given by:
+
+\[
+\text{Total Arrangements} = \frac{n!}{n_1! \times n_2! \times n_3!}
+\]
+
+Where:
+- \( n \) is the total number of items,
+- \( n_1, n_2, n_3, \dots \) are the counts of each distinct type of item.
+
+In this case:
+- \( n = 6 + 5 + 4 = 15 \) (total disks),
+- \( n_1 = 6 \) (red disks),
+- \( n_2 = 5 \) (yellow disks),
+- \( n_3 = 4 \) (green disks).
+
+Now, we can compute the factorials:
+
+\[
+15! = 1307674368000
+\]
+
+\[
+6! = 720, \quad 5! = 120, \quad 4! = 24
+\]
+
+Now substituting these into the formula:
+
+\[
+\text{Total Arrangements} = \frac{15!}{6! \times 5! \times 4!} = \frac{1307674368000}{720 \times 120 \times 24}
+\]
+
+Calculating the denominator:
+
+\[
+720 \times 120 = 86400, \quad 86400 \times 24 = 2073600
+\]
+
+Now, we can find the total arrangements:
+
+\[
+\text{Total Arrangements} = \frac{1307674368000}{2073600} = 630000
+\]
+
+Thus, the final answer is:
+
+```json
+{ "Final Answer": "630000" }
+```To determine the number of arrangements of the letters in the word "آزادیان" that start with the letter 'د', we will first follow these steps:
+
+1. Identify the total number of letters in the word "آزادیان".
+2. Identify any repeating letters.
+3. Calculate the total arrangements and then focus on the arrangements that start with 'د'.
+
+### Step 1: Count the letters
+The word "آزادیان" comprises 8 letters:
+- آ
+- ز
+- ا
+- د
+- ی
+- ا
+- ن
+
+### Step 2: Count repeating letters
+In "آزادیان", the letter 'ا' repeats twice.
+
+### Step 3: Number of arrangements
+The formula for the number of arrangements of letters, considering repetitions, is given by:
+
+\[
+\text{Arrangements} = \frac{n!}{p_1! \cdot p_2! \cdots p_k!}
+\]
+
+Where:
+- \(n\) is the total number of letters,
+- \(p_i\) are the counts of the repeated letters.
+
+So for "آزادیان":
+
+- Total letters \(n = 8\)
+- Repeated letter 'ا' appears 2 times.
+
+Thus, the arrangements are calculated as:
+
+\[
+\text{Arrangements of "آزادیان"} = \frac{8!}{2!} = \frac{40320}{2} = 20160
+\]
+
+### Step 4: Arrangements starting with 'د'
+If the arrangement must start with the letter 'د', we then consider the 7 remaining letters:
+- آ
+- ز
+- ا
+- ی
+- ا
+- ن
+
+Now we have a new problem with 7 letters where 'ا' still repeats twice. So the arrangements will be:
+
+\[
+\text{Arrangements} = \frac{7!}{2!} = \frac{5040}{2} = 2520
+\]
+
+### Final Answer
+Putting it all together, the total arrangements of the letters in "آزادیان" that start with 'د' is 2520.
+
+Thus, the final answer in the specified JSON format will be:
+
+```json
+{ "Final Answer": "2520" }
+```To solve the problem, we first need to understand what is being asked: we need to find the number of arrangements of the letters in the word "آزادیان" (which translates to "Azadiyan" in English) that start with 'D' and end with 'N'.
+
+1. **Step 1: Count the letters**  
+   The word "آزادیان" consists of the following letters:  
+   - آ (Alef)
+   - ز (Zay)
+   - ا (Alef, repeated)
+   - د (Dal)
+   - ی (Yeh)
+   - ا (Alef, repeated)
+   - ن (Noon)
+
+   In total, the letters are: آ, ز, ا, د, ی, ا, ن.
+
+   We can observe the letters:
+   - آ appears 2 times
+   - ا appears 3 times
+   - ز appears 1 time
+   - د appears 1 time
+   - ی appears 1 time
+   - ن appears 1 time
+
+   Thus, we can summarize:
+   - Total letters = 7  
+   - Unique letters = {آ, ز, ا, د, ی, ن}
+
+2. **Step 2: Fix 'D' and 'N'**  
+   Since the arrangements must start with 'D' and end with 'N', we can fix these two letters:
+   - The first letter is 'D'
+   - The last letter is 'N'
+
+3. **Step 3: Arrange the remaining letters**  
+   Now we need to arrange the remaining letters: آ, ز, ا, ی, ا.
+   - The remaining letters (not including 'D' and 'N') are: آ, ز, ا, ا, ی
+   - This set consists of 5 letters where 'آ' appears 1 time, 'ز' appears 1 time, 'ا' appears 2 times, and 'ی' appears 1 time.
+
+4. **Step 4: Calculate the arrangements of the remaining letters**  
+   The number of arrangements of these 5 letters can be calculated using the formula for permutations of multiset:
+
+   \[
+   \text{Number of arrangements} = \frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}
+   \]
+
+   where \( n \) is the total number of letters, and \( n_1, n_2, \ldots, n_k \) are the frequencies of the distinct letters.
+
+   In this case:
+   - Total letters (n) = 5
+   - Frequencies: (آ: 1, ز: 1, ا: 2, ی: 1)
+
+   Thus, we get:
+
+   \[
+   \text{Number of arrangements} = \frac{5!}{1! \times 1! \times 2! \times 1!} = \frac{120}{2} = 60
+   \]
+
+5. **Final Answer**  
+   Therefore, the number of arrangements of the word "آزادیان" that start with 'D' and end with 'N' is 60.
+
+In JSON format, the final answer is:
+
+```json
+{ "Final Answer": "60" }
+```To find the number of different arrangements (permutations) of the letters in the word "مسیسیپی" (which contains repetitions), we first identify each letter along with its frequency.
+
+The word "مسیسیپی" contains the following letters:
+- م (1)
+- س (2)
+- ی (1)
+- پ (1)
+- آئی (1)
+
+So, the total number of letters is 8 letters: م, س, س, ی, پ, س, آئی.
+
+The formula for permutations of a multiset is given by:
+
+\[
+\text{Permutations} = \frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}
+\]
+
+Where:
+- \(n\) is the total number of items to arrange,
+- \(n_1, n_2, \ldots, n_k\) are the frequencies of the respective items.
+
+In this case, we have:
+- Total letters \(n = 8\)
+- Frequencies:  م (1), س (3), ی (1), پ (1), آئی (1)
+
+Now we plug in the values into the formula:
+
+\[
+\text{Permutations} = \frac{8!}{1! \times 3! \times 1! \times 1! \times 1!}
+\]
+
+Calculating the factorials:
+
+- \(8! = 40320\)
+- \(1! = 1\)
+- \(3! = 6\)
+
+Now calculating:
+
+\[
+\text{Permutations} = \frac{40320}{1 \times 6 \times 1 \times 1 \times 1} = \frac{40320}{6} = 6720
+\]
+
+Thus, the number of different arrangements of the letters in "مسیسیپی" is 6720. 
+
+The final answer in JSON format is:
+
+```json
+{ "Final Answer": "6720" }
+```لفظ "اجازت" میں کل 6 حروف ہیں: ا، ج، ا، ز، ت۔ 
+
+ہمیں ان حروف کا ایسا اہتمام کرنا ہے کہ یہ الفاظ "ٹی" کے ساتھ شروع ہوں اور "ن" کے ساتھ اختتام پذیر ہوں۔ یہ لفظ موجود نہیں ہے کیونکہ "اجازت" میں حرف "ن" موجود نہیں ہے، تو درجہ ذیل مضمون یہاں ہمارا مرکزی نکتہ ہے:
+
+نہیں، "اجازت" میں حرف "ن" موجود نہیں ہے، تو اس وجہ سے اس کا اہتمام ممکن نہیں ہے۔
+
+ایسا کیا جا سکتا ہے کہ ہم ان حروف کا اہتمام کریں:
+
+1. "ٹی" کا آغاز ہونا: جبکہ حرف "ن" ہے ہی نہیں، ہم آگے نہیں بڑھ سکتے ہیں۔ 
+
+اس لئے:
+
+```json
+{"Final Answer": "0"}
+```لفظ "اجازت نامے" میں 6 حروف ہیں: ا، ج، از، ت، ن، م، ا، اور ے۔
+
+ہمارے مسئلے میں یہ تقاضہ ہے کہ حرف "ٹی" اور "ایس" کے درمیان ہمیشہ 4 حرف موجود ہوں۔ 
+
+1. **ٹی اور ایس کی مجموعی جگہیں:** چونکہ "ٹی" اور "ایس" کے درمیان 4 حرف ہونے ہیں، اس کے لیے "ٹی" اور "ایس" کے لئے 5 جگہیں ہوں گی: 
+   - 1st جگہ: ٹی
+   - 2nd جگہ: حرف 1
+   - 3rd جگہ: حرف 2
+   - 4th جگہ: حرف 3
+   - 5th جگہ: حرف 4
+   - 6th جگہ: ایس
+
+2. **مناسب حروف کا انتخاب:** باقی 6 حروف کی تعداد کو مدنظر رکھتے ہوئے (اجازت نامے میں) جو "ٹی" اور "ایس" نہیں ہیں (یعنی: ا، ج، از، ت، ن، م، ا، اور ے میں سے باقی حروف) باقی 4 حروف کو منتخب کیا جائے گا۔
+
+3. **حروف کی کئی ترتیب:** 
+   - "ٹی" اور "ایس" کی جگہیں طے ہیں (5 مخصوص جگہیں)۔
+   - باقی 4 حروف کو ان 4 مخصوص جگہوں میں ترتیب دینا ہوگا۔
+   - 4 حروف کی ترتیب کے 4! = 24 طریقے ہیں۔
+
+4. **حروف کی بچت:** ٹی اور ایس کی اپنی ایک مخصوص جگہ ہوگی۔ انسانی طور پر ہم ٹی اور ایس کو ان کی ترتیب میں بھی تبدیل کرسکتے ہیں (یعنی ٹی اور ایس کی جگہ تبدیل کی جا سکتی ہے)۔
+
+مطابق:
+- ٹی اور ایس کی 2! = 2 طریقے ہوں گے۔
+
+5. **حتمی جواب:** تو، ہمارے پاس:
+   - 4! (حروف کی ترتیب) * 2! (ٹی اور ایس کی ترتیب) = 24 * 2 = 48 مختلف طریقے۔
+
+لہذا حتمی جواب کچھ اس طرح ہے:
+
+```json
+{"Final Answer": "48"}
+```To solve the problem of selecting 4 cards from a standard deck of 52 cards, where not all the selected cards are face cards, we first calculate the total number of ways to choose 4 cards from 52 without any restrictions.
+
+The formula for combinations is given by:
+
+\[
+C(n, r) = \frac{n!}{r!(n - r)!}
+\]
+
+Where \( n \) is the total number of items to choose from, \( r \) is the number of items to choose, and \( ! \) denotes factorial.
+
+1. Calculate the total number of ways to choose 4 cards from 52:
+
+\[
+C(52, 4) = \frac{52!}{4!(52 - 4)!} = \frac{52!}{4! \times 48!}
+\]
+
+Calculating \( C(52, 4) \):
+
+\[
+C(52, 4) = \frac{52 \times 51 \times 50 \times 49}{4 \times 3 \times 2 \times 1} = \frac{6497400}{24} = 270725
+\]
+
+2. Now, let's consider the restriction that not all selected cards can be face cards. 
+
+In a standard deck of cards:
+- There are 12 face cards (3 face cards in each of the 4 suits: Kings, Queens, and Jacks).
+- The rest of the deck consists of 40 non-face cards.
+
+3. It is easier to find the complement of the required scenario, meaning we will first find the number of ways to select 4 cards that are all face cards:
+
+\[
+C(12, 4) = \frac{12!}{4!(12 - 4)!} = \frac{12!}{4! \times 8!}
+\]
+
+Calculating \( C(12, 4) \):
+
+\[
+C(12, 4) = \frac{12 \times 11 \times 10 \times 9}{4 \times 3 \times 2 \times 1} = \frac{11880}{24} = 495
+\]
+
+4. Now we subtract the number of ways to select 4 face cards from the total selections to find the ways to select cards such that not all are face cards:
+
+\[
+\text{Number of valid ways} = C(52, 4) - C(12, 4)
+\]
+\[
+= 270725 - 495 = 270230
+\]
+
+Thus, the final answer to the problem, in the specified format, is:
+
+```json
+{
+  "Final Answer": "270230"
+}
+```To find out how many triangles can be formed by connecting points in a circle, we can use the combination formula. The number of ways to choose 3 points from 23 points is given by the combination \( C(n, k) \), where \( n \) is the total number of points and \( k \) is the number of points we want to choose, which in this case is 3.
+
+The combination formula is:
+
+\[
+C(n, k) = \frac{n!}{k!(n-k)!}
+\]
+
+For our problem:
+
+- \( n = 23 \)
+- \( k = 3 \)
+
+Substituting these values into the formula gives us:
+
+\[
+C(23, 3) = \frac{23!}{3!(23-3)!} = \frac{23!}{3! \times 20!}
+\]
+
+Calculating this step-by-step:
+
+1. Simplify \( 23! \) in terms of \( 20! \):
+   \[
+   23! = 23 \times 22 \times 21 \times 20!
+   \]
+
+2. Substitute this back into the combination formula:
+   \[
+   C(23, 3) = \frac{23 \times 22 \times 21 \times 20!}{3! \times 20!} = \frac{23 \times 22 \times 21}{3!}
+   \]
+
+3. Calculate \( 3! = 6 \):
+   \[
+   C(23, 3) = \frac{23 \times 22 \times 21}{6}
+   \]
+
+4. Calculate \( 23 \times 22 \times 21 \):
+   \[
+   23 \times 22 = 506
+   \]
+   \[
+   506 \times 21 = 10626
+   \]
+
+5. Now divide by 6:
+   \[
+   \frac{10626}{6} = 1771
+   \]
+
+Thus, the total number of triangles (rag) that can be formed by connecting any 3 of the 23 points on the circle is **1771**.
+
+So the final answer in the required format is:
+
+```json
+{ "Final Answer": "1771" }
+```To solve the problem, we need to find out how many ways we can select a team of 7 members from a group that consists of only boys (since the team cannot include any girls).
+
+Given:
+- Number of girls = 6
+- Number of boys = 9
+- Members to be selected = 7
+- Since the team cannot include any girls, we will only select from the boys.
+
+Now, we need to select 7 boys out of 9 boys.
+
+The number of ways to choose \( r \) members from \( n \) members is given by the combination formula:
+\[
+C(n, r) = \frac{n!}{r!(n-r)!}
+\]
+
+In our case, \( n = 9 \) and \( r = 7 \):
+\[
+C(9, 7) = \frac{9!}{7!(9-7)!} = \frac{9!}{7! \cdot 2!}
+\]
+
+Calculating this:
+\[
+C(9, 7) = \frac{9 \times 8}{2 \times 1} = \frac{72}{2} = 36
+\]
+
+Thus, the number of ways to select a team of 7 members without any girls is 36.
+
+Now, we can present the final answer in the requested JSON format:
+
+```json
+{ "Final Answer": "36" }
+```ہمیں ایک گروپ میں سے 7 ممبران منتخب کرنے ہیں جس میں کم از کم ایک لڑکا اور ایک لڑکی شامل ہوں۔ گروپ میں 6 لڑکیاں اور 9 لڑکے ہیں۔
+
+**مرحلہ 1: کل ممکنہ ٹیموں کی تعداد کا حساب کریں**  
+ہمیں 15 افراد (6 لڑکیاں + 9 لڑکے) میں سے 7 ممبران منتخب کرنے ہیں:
+\[
+\text{کل انتخاب} = \binom{15}{7}
+\]
+
+**مرحلہ 2: غیر ذمہ دار ٹیموں کی تعداد نکالیں**  
+ہم ان ٹیموں کی تعداد کو نکالیں گے جن میں صرف لڑکے یا صرف لڑکیاں ہوں۔  
+1. اگر ہم صرف لڑکیوں کو چنیں:
+\[
+\text{صرف لڑکیوں کی ٹیمیں} = \binom{6}{7} = 0 \quad (\text{کیوں کہ 7 لڑکیاں دستیاب نہیں ہیں})
+\]
+2. اگر ہم صرف لڑکوں کو چنیں:
+\[
+\text{صرف لڑکوں کی ٹیمیں} = \binom{9}{7} = 36
+\]
+
+**مرحلہ 3: کم از کم ایک لڑکا اور ایک لڑکی کا حساب لگائیں**  
+ہم کل ممکنہ ٹیموں سے غیر ذمہ دار ٹیموں کی تعداد کم کرتے ہیں تاکہ ہمیں وہ ٹیمیں ملیں جن میں کم از کم ایک لڑکا اور ایک لڑکی ہوں:
+\[
+\text{درست ٹیمیں} = \binom{15}{7} - \text{صرف لڑکوں کی ٹیمیں}
+\]
+
+**اب ان سب کو گن سکتے ہیں:**
+
+**کل ممکنہ ٹیمیں:**
+\[
+\binom{15}{7} = \frac{15!}{7!(15-7)!} = \frac{15 \times 14 \times 13 \times 12 \times 11 \times 10 \times 9}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 6435
+\]
+
+**غیر ذمہ دار ٹیمیں (صرف لڑکوں کی):**
+\[
+\binom{9}{7} = \frac{9!}{7!(9-7)!} = \frac{9 \times 8}{2 \times 1} = 36
+\]
+
+**درست ٹیموں کی تعداد:**
+\[
+6435 - 36 = 6399
+\]
+
+لہذا، جواب یہ ہے:
+```json
+{ "Final Answer": "6399" }
+```ہمیں 6 لڑکیوں اور 9 لڑکوں میں سے ایک ایسی ٹیم تشکیل دینی ہے جس میں کم از کم 5 لڑکیاں ہوں اور ٹیم میں کل 7 ممبر ہوں۔ اس مسئلے کو حل کرنے کے لیے، ہم مختلف ممکنہ صورتوں پر غور کریں گے:
+
+1. **5 لڑکیاں اور 2 لڑکے**
+2. **6 لڑکیاں اور 1 لڑکا**
+
+ہم ان دونوں صورتوں کے لیے ممکنہ انتخابوں کی تعداد کو حساب کریں گے۔
+
+### صورت 1: 5 لڑکیاں اور 2 لڑکے
+- لڑکیوں کا انتخاب: \( C(6, 5) \)
+- لڑکوں کا انتخاب: \( C(9, 2) \)
+
+یہاں \( C(n, k) \) کا مطلب ہے n اشیاء میں سے k اشیاء کا انتخاب کرنا، جس کی عمومی شکل یہ ہے:
+\[
+C(n, k) = \frac{n!}{k!(n-k)!}
+\]
+
+- لڑکیوں کا انتخاب: 
+\[
+C(6, 5) = 6
+\]
+
+- لڑکوں کا انتخاب: 
+\[
+C(9, 2) = \frac{9!}{2!(9-2)!} = \frac{9 \times 8}{2 \times 1} = 36
+\]
+
+مجموعی تعداد:
+\[
+C(6, 5) \times C(9, 2) = 6 \times 36 = 216
+\]
+
+### صورت 2: 6 لڑکیاں اور 1 لڑکا
+- لڑکیوں کا انتخاب: \( C(6, 6) \)
+- لڑکوں کا انتخاب: \( C(9, 1) \)
+
+- لڑکیوں کا انتخاب: 
+\[
+C(6, 6) = 1
+\]
+
+- لڑکوں کا انتخاب: 
+\[
+C(9, 1) = 9
+\]
+
+مجموعی تعداد:
+\[
+C(6, 6) \times C(9, 1) = 1 \times 9 = 9
+\]
+
+### حتمی جواب
+دونوں صورتوں کے نتائج کو جمع کریں:
+\[
+216 + 9 = 225
+\]
+
+لہذا، 7 ممبروں کی ٹیم کے انتخاب کے لئے جس میں کم از کم 5 لڑکیاں ہوں، ممکنہ طریقے کی تعداد **225** ہے۔
+
+```json
+{ "Final Answer": "225" }
+```To determine how many numbers greater than 1,000,000 can be formed using the digits 1, 2, 2, 4, 2, and 4, we need to consider the total arrangements of these digits and the specific arrangement that has exactly 6 digits.
+
+1. **Understanding the problem**:
+   - We have the digits: 1, 2, 2, 4, 2, and 4.
+   - We need to create a number using all these digits.
+   - A valid number must be 6 digits (as there are 6 digits available) and greater than 1,000,000.
+
+2. **Valid conditions**:
+   - A number is greater than 1,000,000 if it starts with a digit greater than or equal to 1.
+   - The only digit that satisfies this condition from our set is '1' (the other digits would result in numbers smaller than 1,000,000).
+
+3. **Permutations**:
+   - Since we start with '1', we focus on the remaining digits: 2, 2, 4, 2, and 4.
+   - We need to find how many different arrangements can be formed using these digits.
+
+4. **Calculating the arrangements**:
+   - The formula for the number of distinct permutations of the multiset of items is given by:
+     \[
+     \text{Number of arrangements} = \frac{n!}{n_1! \times n_2! \times \ldots \times n_k!}
+     \]
+   - Here, \( n \) is the total number of digits left (5 in this case), and \( n_1, n_2, \ldots \) are the frequencies of each distinct digit.
+   - The available digits after '1' are:
+     - Digit '2' appears 3 times.
+     - Digit '4' appears 2 times.
+   - Thus, we have:
+     - \( n = 5 \) (the 5 remaining digits)
+     - \( n_2 = 3! \) (for three '2's)
+     - \( n_4 = 2! \) (for two '4's)
+
+5. **Calculating the permutations**:
+   \[
+   \text{Number of arrangements} = \frac{5!}{3! \times 2!} = \frac{120}{6 \times 2} = \frac{120}{12} = 10
+   \]
+
+So, there are 10 different 6-digit numbers that can be formed using the digits 1, 2, 2, 4, 2, and 4 that are greater than 1,000,000.
+
+Final answer in the requested format:
+```json
+{ "Final Answer": "10" }
+```To solve the problem of seating 7 girls and 5 boys in such a way that no two boys are sitting together, we can break down the solution into a series of steps:
+
+1. **Seat the Girls First**: We start by seating the 7 girls. The number of ways to arrange 7 girls is given by the factorial of 7 (denoted as 7!).
+
+   \[
+   7! = 5040
+   \]
+
+2. **Create Slots for Boys**: Once the girls are seated, they create gaps (or slots) where the boys can be seated. With 7 girls seated, we have:
+
+   - One gap before the first girl
+   - One gap between each pair of girls (there are 6 pairs of girls)
+   - One gap after the last girl
+
+   This gives us a total of \(7 + 1 = 8\) slots.
+
+3. **Place the Boys in the Slots**: We want to place the 5 boys in these 8 slots, ensuring that no two boys occupy the same slot (which would mean they are sitting together). The number of ways to choose 5 slots from these 8 slots is given by the combination formula:
+
+   \[
+   \binom{8}{5} = \frac{8!}{5!(8-5)!} = 56
+   \]
+
+4. **Arrangement of Boys**: Once we have chosen 5 slots, the boys can be arranged within these selected slots in different ways. The number of arrangements of 5 boys is given by the factorial of 5 (denoted as 5!).
+
+   \[
+   5! = 120
+   \]
+
+5. **Combine Everything**: Finally, we can combine the total ways of arranging the girls, choosing the slots for the boys, and arranging the boys in those slots.
+
+   The total number of arrangements is:
+
+   \[
+   \text{Total Ways} = 7! \times \binom{8}{5} \times 5!
+   \]
+
+   Substituting the values we calculated:
+
+   \[
+   \text{Total Ways} = 5040 \times 56 \times 120
+   \]
+
+6. **Calculating the Final Answer**:
+
+   First, we calculate \( 5040 \times 56 \):
+
+   \[
+   5040 \times 56 = 282240
+   \]
+
+   Now, multiply that by 120:
+
+   \[
+   282240 \times 120 = 33868800
+   \]
+
+So, the final answer is:
+
+```json
+{ "Final Answer": "33868800" }
+```To find the number of distinct words that can be formed from the letters of the word "مساوات", we need to consider the letters and their frequencies.
+
+The letters in the word "مساوات" are:
+- م (1)
+- س (1)
+- ا (2)
+- و (1)
+- ت (1)
+
+The total number of letters is 7, and the frequencies of the letters are:
+- 1 م
+- 1 س
+- 2 ا
+- 1 و
+- 1 ت
+
+The formula for the number of distinct permutations of letters where some letters repeat is given by:
+
+\[
+\frac{n!}{n_1! \times n_2! \times ... \times n_k!}
+\]
+
+Where:
+- \(n\) is the total number of letters,
+- \(n_1, n_2, ..., n_k\) are the frequencies of the distinct letters.
+
+Therefore, the calculation becomes:
+
+\[
+n = 7 \quad (م + س + ا + و + ت)
+\]
+\[
+n_1 = 1 \quad (م)
+\]
+\[
+n_2 = 1 \quad (س)
+\]
+\[
+n_3 = 2 \quad (ا)
+\]
+\[
+n_4 = 1 \quad (و)
+\]
+\[
+n_5 = 1 \quad (ت)
+\]
+
+Substituting into the formula:
+
+\[
+\text{Number of words} = \frac{7!}{1! \times 1! \times 2! \times 1! \times 1!} = \frac{5040}{2} = 2520
+\]
+
+Thus, the final answer can be formatted in JSON as follows:
+
+```json
+{ "Final Answer": "2520" }
+```To solve this problem, we need to consider the constraint imposed by the 5 students who either all want to join the party or none at all.
+
+Let's break down the problem:
+
+1. **Two Scenarios**:
+   a. **Scenario 1**: All 5 students join the party.
+   b. **Scenario 2**: None of the 5 students join the party.
+
+**Scenario 1**: If all 5 of these students join the party, then we need to select 12 - 5 = 7 more students from the remaining 22 students (27 total students - 5 who have decided). The number of ways to select these 7 students from 22 is given by the combination formula \( C(n, k) = \frac{n!}{k!(n-k)!} \).
+
+\[
+C(22, 7) = \frac{22!}{7!(22 - 7)!} = \frac{22!}{7! \cdot 15!}
+\]
+
+Calculating this:
+
+\[
+C(22, 7) = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16}{7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 497420
+\]
+
+**Scenario 2**: If none of these 5 students join the party, then we have to select all 12 students from the remaining 22 students. The number of ways to do this is:
+
+\[
+C(22, 12) = \frac{22!}{12!(22 - 12)!} = \frac{22!}{12! \cdot 10!}
+\]
+
+Calculating this:
+
+\[
+C(22, 12) = C(22, 10) \text{ (since } C(n, k) = C(n, n-k) \text{)}
+\]
+\[
+C(22, 10) = \frac{22 \times 21 \times 20 \times 19 \times 18 \times 17 \times 16 \times 15 \times 14 \times 13}{10 \times 9 \times 8 \times 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1} = 646646
+\]
+
+**Total Ways**: Now we add the number of ways from both scenarios:
+
+\[
+\text{Total Ways} = C(22, 7) + C(22, 12) = 497420 + 646646 = 1143066
+\]
+
+Therefore, the final answer is expressed in JSON format as follows:
+
+```json
+{ "Final Answer": "1143066" }
+```To solve this problem, we need to find the number of ways a student can select a total of 10 questions from two parts of a question paper, with certain conditions applied.
+
+Here’s how we can break it down:
+
+1. **Given Data**:
+   - Part I has 7 questions.
+   - Part II has 9 questions.
+   - The student must select a total of 10 questions.
+   - The student must select at least 3 questions from each part.
+
+2. **Selection Breakdown**:
+   Let \( x \) be the number of questions selected from Part I, and \( y \) be the number of questions selected from Part II. Hence, we have:
+   \[
+   x + y = 10
+   \]
+   with the conditions \( x \geq 3 \) and \( y \geq 3 \).
+
+3. **Rewriting Conditions**:
+   Since \( x \) and \( y \) must be at least 3, let's redefine them:
+   Let \( x' = x - 3 \) (i.e., \( x' \) is the number of questions selected from Part I above the minimum of 3) and \( y' = y - 3 \). Then:
+   \[
+   x' + y' = 4
+   \]
+   where \( x' \geq 0 \) and \( y' \geq 0 \).
+
+4. **Finding Non-negative Integer Solutions**:
+   The expression \( x' + y' = 4 \) can be solved using the stars and bars combinatorial method. The number of solutions in non-negative integers is given by:
+   \[
+   \binom{4+2-1}{2-1} = \binom{5}{1} = 5
+   \]
+   This means there are 5 ways to distribute the extra 4 questions.
+
+5. **Calculating Combinations**:
+   Now we will find the actual ways to choose the questions based on the identified combinations of \( x \) and \( y \):
+
+   - **Case 1**: \( (x = 3, y = 7) \): 
+     - Choose 3 from Part I and 7 from Part II:
+     \[
+     \binom{7}{3} \cdot \binom{9}{7} = 35 \cdot 36 = 1260
+     \]
+
+   - **Case 2**: \( (x = 4, y = 6) \):
+     - Choose 4 from Part I and 6 from Part II:
+     \[
+     \binom{7}{4} \cdot \binom{9}{6} = 35 \cdot 84 = 2940
+     \]
+
+   - **Case 3**: \( (x = 5, y = 5) \):
+     - Choose 5 from Part I and 5 from Part II:
+     \[
+     \binom{7}{5} \cdot \binom{9}{5} = 21 \cdot 126 = 2646
+     \]
+
+   - **Case 4**: \( (x = 6, y = 4) \):
+     - Choose 6 from Part I and 4 from Part II:
+     \[
+     \binom{7}{6} \cdot \binom{9}{4} = 7 \cdot 126 = 882
+     \]
+
+   - **Case 5**: \( (x = 7, y = 3) \):
+     - Choose 7 from Part I and 3 from Part II:
+     \[
+     \binom{7}{7} \cdot \binom{9}{3} = 1 \cdot 84 = 84
+     \]
+
+6. **Total Combinations**:
+   Adding all these cases together gives us the total number of ways to select the questions:
+   \[
+   1260 + 2940 + 2646 + 882 + 84 = 7792
+   \]
+
+Thus, the student can select the questions in **7792** different ways.
+
+Here is the final answer in the requested JSON format:
+
+```json
+{ "Final Answer": "7792" }
+```ہمیں 52 کارڈز کے ایک پیک سے 6 کارڈ منتخب کرنے کے مختلف طریقوں کی تعداد کا حساب کرنا ہے۔ ہم یہ کام کُم بِنیشن کی مدد سے کریں گے۔ کُم بِنیشن کا فارمولہ یہ ہے:
+
+\[ C(n, r) = \frac{n!}{r!(n - r)!} \]
+
+جہاں:
+- \( n \) = کل آئٹمز کی تعداد (یہاں 52)
+- \( r \) = منتخب کیے جانے والے آئٹمز کی تعداد (یہاں 6)
+
+اب ہم اس فارمولے کا استعمال کرتے ہیں:
+
+1. \( n = 52 \)
+2. \( r = 6 \)
+
+اب ہم کُم بِنیشن کا حساب لگاتے ہیں:
+
+\[ C(52, 6) = \frac{52!}{6!(52 - 6)!} = \frac{52!}{6! \cdot 46!} \]
+
+یہاں پر، \( 52! \) کی قدرتی طور پر ہمیں 52 گرتا ہے، تو ہم اسے 52 سے 47 تک کے multiplicative عوامل سے گرا سکتے ہیں:
+
+\[ C(52, 6) = \frac{52 \times 51 \times 50 \times 49 \times 48 \times 47}{6 \times 5 \times 4 \times 3 \times 2 \times 1} \]
+
+اب ہم اس کا حساب کرتے ہیں:
+
+\[ C(52, 6) = \frac{20,358,520}{720} = 28,224 \]
+
+اب، ہم معلوم کرتے ہیں کہ ان منتخب کارڈز میں سے کتنے کارڈز ایک ہی رنگ کے ہو سکتے ہیں۔ چونکہ ایک پیک میں 4 رنگ (دل، ہارٹ، ڈائمنڈ، کلب) ہوتے ہیں اور ہر رنگ میں 13 کارڈز ہوتے ہیں، ایک ہی رنگ کے 6 کارڈ منتخب کرنے کے طریقوں کی تعداد ہوگی:
+
+ہر رنگ کے لیے:
+
+\[ C(13, 6) = \frac{13!}{6!(13 - 6)!} = \frac{13!}{6! \cdot 7!} \]
+
+اب ہم اس کا حساب لگاتے ہیں:
+
+\[ C(13, 6) = \frac{13 \times 12 \times 11 \times 10 \times 9 \times 8}{6 \times 5 \times 4 \times 3 \times 2 \times 1} = 1716 \]
+
+چونکہ یہ کارڈز کسی ایک رنگ کے ہیں، اور ہمارے پاس 4 رنگ ہیں تو:
+
+تعداد کارڈز ایک ہی رنگ کے انتخاب کے طریقے:
+
+\[ 4 \times C(13, 6) = 4 \times 1716 = 6864 \]
+
+اب، جب ہم دونوں جوابات کو دیکھتے ہیں تو ہمیں نچلے نتیجے ملتے ہیں:
+
+- 6 کارڈ منتخب کرنے کے طریقے: 28,224
+- ایک ہی رنگ کے 6 کارڈ منتخب کرنے کے طریقے: 6,864
+
+اب ہم حتمی نتیجے کی شکل میں جواب دیتے ہیں:
+
+```json
+{
+    "Final Answer": "28224"
+}
+```To solve the problem of finding the number of different 8-letter arrangements of the letters in the word "بیٹی" such that not all the letters come together, we can follow these steps:
+
+1. **Identify the letters**: The word "بیٹی" consists of the letters ب, ی, ٹ, ی. Since 'ی' appears twice, we have the following letters: {ب, ی, ی, ٹ}.
+
+2. **Count total arrangements of all letters without restriction**: The total arrangements of the letters can be calculated considering the repetition of 'ی'. The formula for permutations of multiset is given by:
+   \[
+   \text{Total arrangements} = \frac{n!}{p_1! \times p_2! \cdots p_k!}
+   \]
+   where \( n \) is the total number of letters and \( p_i \) are the frequencies of each distinct letter.
+   
+   Here, \( n = 4 \) (ب, ی, ی, ٹ) and the frequencies are: 
+   - 1 for ب, 
+   - 2 for ی, 
+   - 1 for ٹ.
+
+   Therefore:
+   \[
+   \text{Total arrangements} = \frac{4!}{1! \times 2! \times 1!} = \frac{24}{2} = 12.
+   \]
+
+3. **Count arrangements where all instances of 'ی' are together**: Consider 'ی' as a single block or letter. Then the letters would be: {ب, یّ, ٹ} (where یّ represents the group of two 'ی's). 
+
+   Now we have 3 distinct letters: ب, یّ, ٹ. The arrangements will be:
+   \[
+   \text{Arrangements where ی's are together} = 3! = 6.
+   \]
+
+4. **Calculate arrangements where not all 'ی' are together**: We subtract the arrangements where all 'ی's are together from the total arrangements:
+   \[
+   \text{Arrangements where not all 'ی' are together} = \text{Total arrangements} - \text{Arrangements where ی's are together}
+   \]
+   Therefore:
+   \[
+   \text{Arrangements not together} = 12 - 6 = 6.
+   \]
+
+In conclusion, the total number of different arrangements of the letters in the word "بیٹی," such that not all 'ی's are together, is 6.
+
+The final answer in the requested JSON format is:
+
+```json
+{"Final Answer": "6"}
+```Done 2
